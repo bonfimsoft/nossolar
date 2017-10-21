@@ -1,0 +1,1314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-15">
+<style>
+      .table {
+        background-color:#F5F5FF;
+        border-left:4px solid gray;
+        border-bottom:4px solid gray;
+        border-top:4px solid gray;
+        border-right:4px solid gray;
+        margin-bottom:3em;
+        margin-left:2em;
+        margin-right:2em;
+        padding:1em;
+      }
+      .tableNameHeading h1 {
+          display: inline;
+        font-family: Segoe UI, Arial, sans-serif;
+        font-size:125%;
+        font-weight:bold;
+      }
+        
+      .tableNameHeading h2 {
+        display: inline;
+        font-family: Segoe UI, Arial, sans-serif;
+        font-size:115%;
+        font-weight:normal;
+      }
+      
+      .tableComment { 
+        background-color:#e4efff; margin-bottom:20px;
+      }
+      
+      .tableDefinition { 
+        padding:2px;
+        border-collapse:collapse;
+        margin-top:1em;
+      }
+
+      .tdTableDefinition {
+        padding-right:10px;
+        vertical-align:top;
+        border-top:1px solid #C0C0C0;
+      }
+
+      .tdLogicalColName {
+        width:20em;
+      }
+      
+      .tdPhysicalColName {
+        width:20em;
+      }
+      
+      .tdDataType {
+        width:10em;
+      }
+
+      .tdPkFlag {
+        width:4em;
+      }
+
+      .tdNullFlag {
+        width:9em;
+      }
+
+      .tdTableHeading {
+        padding:2px;
+        font-family: Segoe UI, Arial, sans-serif;
+        font-weight: bold;
+        vertical-align:top;
+        border-bottom: 1px solid #C0C0C0;
+        background-color: rgb(240,240,240);
+      }
+      
+      .subTitle {
+        font-family: Segoe UI, Arial, sans-serif;
+        font-weight: bold;
+      }
+
+      .references {
+      }
+      .comment {
+        color:#666666;
+        margin-left:3em;
+        padding:0.25em;
+      }
+    </style>
+<title>DER_NossoLar</title>
+</head>
+<body>
+<center>
+<h2>DER_NossoLar</h2>
+</center>
+<h3>List of tables</h3>
+<ul>
+<li>
+<a href="#tb001_perfil">tb001_perfil</a>
+</li>
+<li>
+<a href="#tb002_trabalhador">tb002_trabalhador</a>
+</li>
+<li>
+<a href="#tb003_paciente">tb003_paciente</a>
+</li>
+<li>
+<a href="#tb004_compromisso">tb004_compromisso</a>
+</li>
+<li>
+<a href="#tb005_livro">tb005_livro</a>
+</li>
+<li>
+<a href="#tb006_tipo_tratamento">tb006_tipo_tratamento</a>
+</li>
+<li>
+<a href="#tb007_tipo_problema">tb007_tipo_problema</a>
+</li>
+<li>
+<a href="#tb008_atendimento">tb008_atendimento</a>
+</li>
+<li>
+<a href="#tb009_tratamento">tb009_tratamento</a>
+</li>
+<li>
+<a href="#tb010_entrevista">tb010_entrevista</a>
+</li>
+<li>
+<a href="#tb011_problema">tb011_problema</a>
+</li>
+<li>
+<a href="#tb012_feriado">tb012_feriado</a>
+</li>
+<li>
+<a href="#tr001_trabalhador_perfil">tr001_trabalhador_perfil</a>
+</li>
+</ul>
+<div class="tableNameHeading">
+<h1>tb001_perfil<a name="tb001_perfil"></a>
+</h1>
+<h2>
+      (Physical Name: tb001_perfil)
+      </h2>
+<p class="comment">Tabela responsavel pelo armazenamento dos perfis dos sistema</p>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id_perfil (PK)</td><td class="tdTableDefinition">id_perfil</td><td class="tdTableDefinition">BIGINT</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Identificador do perfil</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">nu_versao</td><td class="tdTableDefinition">nu_versao</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Numero da vers&atilde;o do registro. Utilizado para controle de persistencia.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">no_perfil</td><td class="tdTableDefinition">no_perfil</td><td class="tdTableDefinition">VARCHAR(80)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Nome de identifica&ccedil;&atilde;o do perfil</div>
+</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">Referenced By</p>
+<ul>
+<li>
+<a href="#tr001_trabalhador_perfil">tr001_trabalhador_perfil</a> referencing (id_perfil)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>tb002_trabalhador<a name="tb002_trabalhador"></a>
+</h1>
+<h2>
+      (Physical Name: tb002_trabalhador)
+      </h2>
+<p class="comment">Tabela responsavel pelo armazenamento de dados dos trabalhadores do centro. Os trabalhadores podem ter acesso ao sistema ou n&atilde;o. Para ter acesso &eacute; necessario ter a senha cadastrada e perfis associados.</p>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id_trabalhador (PK)</td><td class="tdTableDefinition">id_trabalhador</td><td class="tdTableDefinition">BIGINT</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Identificador unico do trabalhador</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">nu_versao</td><td class="tdTableDefinition">nu_versao</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Numero da vers&atilde;o do registro</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">co_matricula</td><td class="tdTableDefinition">co_matricula</td><td class="tdTableDefinition">VARCHAR(20)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Matricula do trabalhador junto ao centro</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">co_senha</td><td class="tdTableDefinition">co_senha</td><td class="tdTableDefinition">VARCHAR(80)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Senha criptografada de acesso ao sistema.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">no_trabalhador</td><td class="tdTableDefinition">no_trabalhador</td><td class="tdTableDefinition">VARCHAR(80)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Nome completo do trabalhador</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">no_cracha</td><td class="tdTableDefinition">no_cracha</td><td class="tdTableDefinition">VARCHAR(20)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Nome de exibi&ccedil;&atilde;o no cracha do trabalhador</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">ed_trabalhador</td><td class="tdTableDefinition">ed_trabalhador</td><td class="tdTableDefinition">VARCHAR(255)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Endere&ccedil;o do trabalhador</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">no_bairro</td><td class="tdTableDefinition">no_bairro</td><td class="tdTableDefinition">VARCHAR(80)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Bairro de moradia do trabalhador</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">no_cidade</td><td class="tdTableDefinition">no_cidade</td><td class="tdTableDefinition">VARCHAR(80)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Cidade de moradia do trabalhador</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">sg_uf</td><td class="tdTableDefinition">sg_uf</td><td class="tdTableDefinition">VARCHAR(2)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Unidade de federa&ccedil;&atilde;o de moradia do trabalhador</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">co_cep</td><td class="tdTableDefinition">co_cep</td><td class="tdTableDefinition">VARCHAR(8)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">CEP de moradia do trabalhador</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">dt_nascimento</td><td class="tdTableDefinition">dt_nascimento</td><td class="tdTableDefinition">DATE</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Data de nascimento do trabalhador</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">co_cpf</td><td class="tdTableDefinition">co_cpf</td><td class="tdTableDefinition">VARCHAR(11)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">N&uacute;mero de identifica&ccedil;&atilde;o do CPF do trabalhador</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">co_rg</td><td class="tdTableDefinition">co_rg</td><td class="tdTableDefinition">VARCHAR(15)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">N&uacute;mero do RG do trabalhdor</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">de_profissao</td><td class="tdTableDefinition">de_profissao</td><td class="tdTableDefinition">VARCHAR(80)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Descri&ccedil;&atilde;o da profiss&atilde;o do trabalhador</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">ic_sexo</td><td class="tdTableDefinition">ic_sexo</td><td class="tdTableDefinition">VARCHAR(1)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Identificador do sexo do trabalhador:<br>M - Masculino<br>F - Feminino</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">im_foto</td><td class="tdTableDefinition">im_foto</td><td class="tdTableDefinition">CLOB</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Armazena a foto do trabalhador</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">de_email1</td><td class="tdTableDefinition">de_email1</td><td class="tdTableDefinition">VARCHAR(80)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Email de contato do trabalhador</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">de_email2</td><td class="tdTableDefinition">de_email2</td><td class="tdTableDefinition">VARCHAR(80)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Email de contato do trabalhador</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">de_telefone1</td><td class="tdTableDefinition">de_telefone1</td><td class="tdTableDefinition">VARCHAR(20)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Telefone de contato do trabalhador</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">de_telefone2</td><td class="tdTableDefinition">de_telefone2</td><td class="tdTableDefinition">VARCHAR(20)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Telefone de contato do trabalhador</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">de_telefone3</td><td class="tdTableDefinition">de_telefone3</td><td class="tdTableDefinition">VARCHAR(20)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Telefone de contato do trabalhador</div>
+</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">Referenced By</p>
+<ul>
+<li>
+<a href="#tr001_trabalhador_perfil">tr001_trabalhador_perfil</a> referencing (id_trabalhador)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>tb003_paciente<a name="tb003_paciente"></a>
+</h1>
+<h2>
+      (Physical Name: tb003_paciente)
+      </h2>
+<p class="comment">Tabela responsavel pelo armazenamento de dados dos pacientes do centro.</p>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id_paciente (PK)</td><td class="tdTableDefinition">id_paciente</td><td class="tdTableDefinition">BIGINT</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Identificador unico do paciente</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">nu_versao</td><td class="tdTableDefinition">nu_versao</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Numero da vers&atilde;o do registro. Utilizado para controle de persistencia.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">no_paciente</td><td class="tdTableDefinition">no_paciente</td><td class="tdTableDefinition">VARCHAR(80)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Nome completo do paciente</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">ed_paciente</td><td class="tdTableDefinition">ed_paciente</td><td class="tdTableDefinition">VARCHAR(255)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Endere&ccedil;o do paciente</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">no_bairro</td><td class="tdTableDefinition">no_bairro</td><td class="tdTableDefinition">VARCHAR(80)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Bairro de moradia do paciente</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">no_cidade</td><td class="tdTableDefinition">no_cidade</td><td class="tdTableDefinition">VARCHAR(80)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Cidade de moradia do paciente</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">sg_uf</td><td class="tdTableDefinition">sg_uf</td><td class="tdTableDefinition">VARCHAR(2)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Unidade de federa&ccedil;&atilde;o de moradia do paciente</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">co_cep</td><td class="tdTableDefinition">co_cep</td><td class="tdTableDefinition">VARCHAR(8)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">CEP de moradia do paciente</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">dt_nascimento</td><td class="tdTableDefinition">dt_nascimento</td><td class="tdTableDefinition">DATE</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Data de nascimento do paciente</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">ic_sexo</td><td class="tdTableDefinition">ic_sexo</td><td class="tdTableDefinition">CHAR</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Identificador do sexo do paciente:<br>M - Masculino<br>F - Feminino</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">de_religiao</td><td class="tdTableDefinition">de_religiao</td><td class="tdTableDefinition">VARCHAR(80)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Nome da religi&atilde;o do paciente</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">de_profissao</td><td class="tdTableDefinition">de_profissao</td><td class="tdTableDefinition">VARCHAR(80)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Descri&ccedil;&atilde;o da profiss&atilde;o do paciente</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">de_email</td><td class="tdTableDefinition">de_email</td><td class="tdTableDefinition">VARCHAR(80)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Email de contato do paciente</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">de_telefone1</td><td class="tdTableDefinition">de_telefone1</td><td class="tdTableDefinition">VARCHAR(20)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Telefone de contato do paciente</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">de_telefone2</td><td class="tdTableDefinition">de_telefone2</td><td class="tdTableDefinition">VARCHAR(20)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Telefone de contato do paciente</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">de_telefone3</td><td class="tdTableDefinition">de_telefone3</td><td class="tdTableDefinition">VARCHAR(20)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Telefone de contato do paciente</div>
+</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">Referenced By</p>
+<ul>
+<li>
+<a href="#tb008_atendimento">tb008_atendimento</a> referencing (id_paciente)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>tb004_compromisso<a name="tb004_compromisso"></a>
+</h1>
+<h2>
+      (Physical Name: tb004_compromisso)
+      </h2>
+<p class="comment">Tabela responsavel pelo armazenamento dos compromissos que podem ser indicados para o tratamento dos pacientes.</p>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id_compromisso (PK)</td><td class="tdTableDefinition">id_compromisso</td><td class="tdTableDefinition">BIGINT</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Identificador do compromisso</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">nu_versao</td><td class="tdTableDefinition">nu_versao</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Numero da vers&atilde;o do registro. Utilizado para controle de persistencia.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">no_compromisso</td><td class="tdTableDefinition">no_compromisso</td><td class="tdTableDefinition">VARCHAR(80)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Nome do compromisso a ser indicado para o tratamento.</div>
+</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">Referenced By</p>
+<ul>
+<li>
+<a href="#tb009_tratamento">tb009_tratamento</a> referencing (id_compromisso)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>tb005_livro<a name="tb005_livro"></a>
+</h1>
+<h2>
+      (Physical Name: tb005_livro)
+      </h2>
+<p class="comment">Tabela responsavel pelo armazenamento dos livros que podem ser indicados para leitura.</p>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id_livro (PK)</td><td class="tdTableDefinition">id_livro</td><td class="tdTableDefinition">BIGINT</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Identificador do livro</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">nu_versao</td><td class="tdTableDefinition">nu_versao</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Numero da vers&atilde;o do registro. Utilizado para controle de persistencia.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">no_titulo</td><td class="tdTableDefinition">no_titulo</td><td class="tdTableDefinition">VARCHAR(80)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Titulo do livro a ser indicado para leitura</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">no_autor</td><td class="tdTableDefinition">no_autor</td><td class="tdTableDefinition">VARCHAR(80)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Nome do autor do livro a ser indicado para leitura.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">ic_ativo</td><td class="tdTableDefinition">ic_ativo</td><td class="tdTableDefinition">BOOLEAN</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Indicador se o livro esta ativo e pode ser indicado para leitura.</div>
+</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">Referenced By</p>
+<ul>
+<li>
+<a href="#tb009_tratamento">tb009_tratamento</a> referencing (id_livro)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>tb006_tipo_tratamento<a name="tb006_tipo_tratamento"></a>
+</h1>
+<h2>
+      (Physical Name: tb006_tipo_tratamento)
+      </h2>
+<p class="comment">Tabela responsavel pelo controle dos tipos de atendimento que podem ser realizados com os pacientes.</p>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id_tipo_tratamento (PK)</td><td class="tdTableDefinition">id_tipo_tratamento</td><td class="tdTableDefinition">BIGINT</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Identificador do tipo de tratamento a ser realizado.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">nu_versao</td><td class="tdTableDefinition">nu_versao</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Numero da vers&atilde;o do registro. Utilizado para controle de persistencia.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">no_tipo_tratamento</td><td class="tdTableDefinition">no_tipo_tratamento</td><td class="tdTableDefinition">VARCHAR(80)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Nome do tratamento realizado</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">ic_formato</td><td class="tdTableDefinition">ic_formato</td><td class="tdTableDefinition">CHAR</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Identifica o formato do tipo de tratamento podendo assumir os valores:<br>P = Passe<br>L = Leitura<br>C = Compromiso</div>
+</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">Referenced By</p>
+<ul>
+<li>
+<a href="#tb009_tratamento">tb009_tratamento</a> referencing (id_tipo_tratamento)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>tb007_tipo_problema<a name="tb007_tipo_problema"></a>
+</h1>
+<h2>
+      (Physical Name: tb007_tipo_problema)
+      </h2>
+<p class="comment">Tabela responsavel pelo controle dos tipos de problemas que podem ser identificados nas entrevistas realizadas com os pacientes.</p>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id_tipo_problema (PK)</td><td class="tdTableDefinition">id_tipo_problema</td><td class="tdTableDefinition">BIGINT</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Identificador do tipo de problema</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">nu_versao</td><td class="tdTableDefinition">nu_versao</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Numero da vers&atilde;o do registro. Utilizado para controle de persistencia.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">no_tipo_problema</td><td class="tdTableDefinition">no_tipo_problema</td><td class="tdTableDefinition">VARCHAR(80)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Nome do tipo de problema</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">ic_aberto</td><td class="tdTableDefinition">ic_aberto</td><td class="tdTableDefinition">BOOLEAN</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Indica se o tipo de problema &eacute; descritivo ou n&atilde;o. Caso este campo seja marcado como verdadeiro, ao selecionar o tipo de problema o usu&aacute;rio dever&aacute; informar a descri&ccedil;&atilde;o mais detalhada do problema identificado e ser&aacute; armazenado na tabela de problema.</div>
+</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">Referenced By</p>
+<ul>
+<li>
+<a href="#tb011_problema">tb011_problema</a> referencing (id_tipo_problema)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>tb008_atendimento<a name="tb008_atendimento"></a>
+</h1>
+<h2>
+      (Physical Name: tb008_atendimento)
+      </h2>
+<p class="comment">Tabela responsavel pelo controle de atendimento aos pacientes</p>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id_atendimento (PK)</td><td class="tdTableDefinition">id_atendimento</td><td class="tdTableDefinition">BIGINT</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Identificador do atendimento realizado ao paciente</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">nu_versao</td><td class="tdTableDefinition">nu_versao</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Numero da vers&atilde;o do registro. Utilizado para controle de persistencia.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id_paciente
+                &nbsp;(<a href="#tb003_paciente">FK</a>)
+              </td><td class="tdTableDefinition">id_paciente</td><td class="tdTableDefinition">BIGINT</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Identificador unico do paciente</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">dt_inicio</td><td class="tdTableDefinition">dt_inicio</td><td class="tdTableDefinition">DATE</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Data de registro do inicio do atendimento ao paciente</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">dt_fim</td><td class="tdTableDefinition">dt_fim</td><td class="tdTableDefinition">DATE</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Data de registro do fim do atendimento ao paciente</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">ic_situacao</td><td class="tdTableDefinition">ic_situacao</td><td class="tdTableDefinition">CHAR</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Situa&ccedil;&atilde;o atual do atendimento podendo assumir:<br>A - Em Andamento<br>C - Concluido<br>I - Interrompido</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">ic_dias</td><td class="tdTableDefinition">ic_dias</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Identifica o(s) dia(s) da semana que o paciente pode ser atendido, com base no padr&atilde;o UFBA.<br>1:DOM;2:SEG;4:TER;8:QUA;16:QUI;32:SEX;64:SAB;<br>
+<br>Ex: Paciente atendido TER e QUI = 20</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">ic_tratamento_medico</td><td class="tdTableDefinition">ic_tratamento_medico</td><td class="tdTableDefinition">BOOLEAN</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Identifica se o entrevistado esta realizando algum tratamento medico. Caso nulo significa que a resposta n&atilde;o foi informada.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">ic_tratamento_psicologico</td><td class="tdTableDefinition">ic_tratamento_psicologico</td><td class="tdTableDefinition">BOOLEAN</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Identifica se o entrevistado esta realizando algum tratamento psicologico. Caso nulo significa que a resposta n&atilde;o foi informada.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">ic_tratamento_psiquiatrico</td><td class="tdTableDefinition">ic_tratamento_psiquiatrico</td><td class="tdTableDefinition">BOOLEAN</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Identifica se o entrevistado esta realizando algum tratamento psiquiatrico. Caso nulo significa que a resposta n&atilde;o foi informada.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">ic_tratamento_espiritual</td><td class="tdTableDefinition">ic_tratamento_espiritual</td><td class="tdTableDefinition">BOOLEAN</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Identifica se o entrevistado j&aacute; realizou algum tratamento espiritual. Caso nulo significa que a resposta n&atilde;o foi informada.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">ic_evangelho_lar</td><td class="tdTableDefinition">ic_evangelho_lar</td><td class="tdTableDefinition">BOOLEAN</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Identifica se o entrevistado realiza o evangelho em casa. Caso nulo significa que a resposta n&atilde;o foi informada.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">ic_leitura_livros</td><td class="tdTableDefinition">ic_leitura_livros</td><td class="tdTableDefinition">BOOLEAN</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Identifica se o entrevistado realiza leitura de livros espiritas. Caso nulo significa que a resposta n&atilde;o foi informada.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">ic_uso_medicamento</td><td class="tdTableDefinition">ic_uso_medicamento</td><td class="tdTableDefinition">BOOLEAN</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Identifica se o entrevistado esta realizando uso de medicamentos. Caso nulo significa que a resposta n&atilde;o foi informada.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">de_medicamentos</td><td class="tdTableDefinition">de_medicamentos</td><td class="tdTableDefinition">LONGVARCHAR</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Armazena o nome dos medicamentos utilizados que foram informados pelo paciente no momento da entrevista.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">ic_proprio</td><td class="tdTableDefinition">ic_proprio</td><td class="tdTableDefinition">BOOLEAN</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Identifica se o atendimento &eacute; proprio (true) ou para terceiros (false)</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">no_responsavel</td><td class="tdTableDefinition">no_responsavel</td><td class="tdTableDefinition">VARCHAR(80)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Nome da pessoa responsavel pelo atendimento quando o atendimento &eacute; para terceiros (proprio=false)</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">no_relacionamento</td><td class="tdTableDefinition">no_relacionamento</td><td class="tdTableDefinition">VARCHAR(40)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Registro do relacionamento da pessoa responsavel pelo atendimento quando o atendimento &eacute; para terceiros (proprio=false)</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">de_telefone</td><td class="tdTableDefinition">de_telefone</td><td class="tdTableDefinition">VARCHAR(20)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Telefone da pessoa responsavel pelo atendimento quando o atendimento &eacute; para terceiros (proprio=false)</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">de_email</td><td class="tdTableDefinition">de_email</td><td class="tdTableDefinition">VARCHAR(80)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Email da pessoa responsavel pelo atendimento quando o atendimento &eacute; para terceiros (proprio=false)</div>
+</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">References</p>
+<ul>
+<li>
+<a href="#tb003_paciente">tb003_paciente</a> through (id_paciente)</li>
+</ul>
+<p class="subTitle">Referenced By</p>
+<ul>
+<li>
+<a href="#tb010_entrevista">tb010_entrevista</a> referencing (id_atendimento)</li>
+<li>
+<a href="#tb009_tratamento">tb009_tratamento</a> referencing (id_atendimento)</li>
+<li>
+<a href="#tb011_problema">tb011_problema</a> referencing (id_atendimento)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>tb009_tratamento<a name="tb009_tratamento"></a>
+</h1>
+<h2>
+      (Physical Name: tb009_tratamento)
+      </h2>
+<p class="comment">Tabela responsavel pelo controle de tratamentos do atendimento dos pacientes.</p>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id_tratamento (PK)</td><td class="tdTableDefinition">id_tratamento</td><td class="tdTableDefinition">BIGINT</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Identificador do tratamento realizado dentro do atendimento.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">nu_versao</td><td class="tdTableDefinition">nu_versao</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Numero da vers&atilde;o do registro. Utilizado para controle de persistencia.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id_atendimento
+                &nbsp;(<a href="#tb008_atendimento">FK</a>)
+              </td><td class="tdTableDefinition">id_atendimento</td><td class="tdTableDefinition">BIGINT</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Identificador do atendimento realizado ao paciente</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id_tipo_tratamento
+                &nbsp;(<a href="#tb006_tipo_tratamento">FK</a>)
+              </td><td class="tdTableDefinition">id_tipo_tratamento</td><td class="tdTableDefinition">BIGINT</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Identificador do tipo de tratamento a ser realizado.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id_livro
+                &nbsp;(<a href="#tb005_livro">FK</a>)
+              </td><td class="tdTableDefinition">id_livro</td><td class="tdTableDefinition">BIGINT</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Identificador do livro</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id_compromisso
+                &nbsp;(<a href="#tb004_compromisso">FK</a>)
+              </td><td class="tdTableDefinition">id_compromisso</td><td class="tdTableDefinition">BIGINT</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Identificador do compromisso</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">dt_passe</td><td class="tdTableDefinition">dt_passe</td><td class="tdTableDefinition">DATE</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Data agendada para a realiza&ccedil;&atilde;o do passe no tratamento do paciente. Esta data s&oacute; &eacute; preenchida quando o tipo de tratamento possui um formato de "P" (PASSE)</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">ic_remarcado</td><td class="tdTableDefinition">ic_remarcado</td><td class="tdTableDefinition">BOOLEAN</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Indicativo se o tratamento foi remarcado automaticamente pelo sistema</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">ic_realizado</td><td class="tdTableDefinition">ic_realizado</td><td class="tdTableDefinition">BOOLEAN</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Indica se o tratamento foi j&aacute; foi realizado / iniciado ou n&atilde;o.</div>
+</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">References</p>
+<ul>
+<li>
+<a href="#tb008_atendimento">tb008_atendimento</a> through (id_atendimento)</li>
+<li>
+<a href="#tb006_tipo_tratamento">tb006_tipo_tratamento</a> through (id_tipo_tratamento)</li>
+<li>
+<a href="#tb005_livro">tb005_livro</a> through (id_livro)</li>
+<li>
+<a href="#tb004_compromisso">tb004_compromisso</a> through (id_compromisso)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>tb010_entrevista<a name="tb010_entrevista"></a>
+</h1>
+<h2>
+      (Physical Name: tb010_entrevista)
+      </h2>
+<p class="comment">Tabela responsavel pelo controle de entrevistas realizadas com os pacientes.</p>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id_entrevista (PK)</td><td class="tdTableDefinition">id_entrevista</td><td class="tdTableDefinition">BIGINT</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Identificador da entrevista</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">nu_versao</td><td class="tdTableDefinition">nu_versao</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Numero da vers&atilde;o do registro. Utilizado para controle de persistencia.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id_atendimento
+                &nbsp;(<a href="#tb008_atendimento">FK</a>)
+              </td><td class="tdTableDefinition">id_atendimento</td><td class="tdTableDefinition">BIGINT</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Identificador do atendimento realizado ao paciente</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">dt_entrevista</td><td class="tdTableDefinition">dt_entrevista</td><td class="tdTableDefinition">DATE</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Data de realiza&ccedil;&atilde;o da entrevista</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">no_entrevistador</td><td class="tdTableDefinition">no_entrevistador</td><td class="tdTableDefinition">VARCHAR(80)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Nome do trabalhador que realizou a entrevista</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">ic_tipo_entrevista</td><td class="tdTableDefinition">ic_tipo_entrevista</td><td class="tdTableDefinition">CHAR</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Identifica o tipo de entrevista realizada:<br>I = Inicial<br>F = Final<br>C = Complementar</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">de_observacao</td><td class="tdTableDefinition">de_observacao</td><td class="tdTableDefinition">LONGVARCHAR</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Campos destinado a observa&ccedil;&otilde;es gerais da entrevista</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">ic_apresenta_melhoras</td><td class="tdTableDefinition">ic_apresenta_melhoras</td><td class="tdTableDefinition">BOOLEAN</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Indicativo se o paciente apresentou mehoras desde a ultima entrevista.</div>
+</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">References</p>
+<ul>
+<li>
+<a href="#tb008_atendimento">tb008_atendimento</a> through (id_atendimento)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>tb011_problema<a name="tb011_problema"></a>
+</h1>
+<h2>
+      (Physical Name: tb011_problema)
+      </h2>
+<p class="comment">Tabela responsavel pelo controle de problemas dos atendimentos identificados nas entrevistas realizadas com os pacientes.</p>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id_problema (PK)</td><td class="tdTableDefinition">id_problema</td><td class="tdTableDefinition">BIGINT</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Identificador unico do problemado paciente.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">nu_versao</td><td class="tdTableDefinition">nu_versao</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Numero da vers&atilde;o do registro. Utilizado para controle de persistencia.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id_tipo_problema
+                &nbsp;(<a href="#tb007_tipo_problema">FK</a>)
+              </td><td class="tdTableDefinition">id_tipo_problema</td><td class="tdTableDefinition">BIGINT</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Identificador do tipo de problema</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id_atendimento
+                &nbsp;(<a href="#tb008_atendimento">FK</a>)
+              </td><td class="tdTableDefinition">id_atendimento</td><td class="tdTableDefinition">BIGINT</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Identificador do atendimento realizado ao paciente</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">de_problema</td><td class="tdTableDefinition">de_problema</td><td class="tdTableDefinition">VARCHAR(255)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Este campo deve ser preenchido quando o campo do tipo de problema &eacute; preenchido com um registro que possui o campo aberto marcado como verdade.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">de_observacao</td><td class="tdTableDefinition">de_observacao</td><td class="tdTableDefinition">LONGVARCHAR</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Campo de observa&ccedil;&otilde;es referente ao problema identificado.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">vr_escala</td><td class="tdTableDefinition">vr_escala</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Escala de gravidade do problema identificado variando de 0 a 10 sendo:<br>0 - Extin&ccedil;&atilde;o<br>1 a 10 - N&iacute;vel de gravidade do problema</div>
+</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">References</p>
+<ul>
+<li>
+<a href="#tb008_atendimento">tb008_atendimento</a> through (id_atendimento)</li>
+<li>
+<a href="#tb007_tipo_problema">tb007_tipo_problema</a> through (id_tipo_problema)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>tb012_feriado<a name="tb012_feriado"></a>
+</h1>
+<h2>
+      (Physical Name: tb012_feriado)
+      </h2>
+<p class="comment">Tabela que armazena os dias que n&atilde;o devem existir atividades no centro</p>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id_feriado (PK)</td><td class="tdTableDefinition">id_feriado</td><td class="tdTableDefinition">BIGINT</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Identificador do registro que representa a data que n&atilde;o deve haver atividades no centro</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">nu_versao</td><td class="tdTableDefinition">nu_versao</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Numero da vers&atilde;o do registro. Utilizado para controle de persistencia.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">no_feriado</td><td class="tdTableDefinition">no_feriado</td><td class="tdTableDefinition">VARCHAR(80)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Nome de identifica&ccedil;&atilde;o do feriado / data de inatividade do centro</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">dt_feriado</td><td class="tdTableDefinition">dt_feriado</td><td class="tdTableDefinition">DATE</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Data do feriado / data de inatividade do centro</div>
+</td>
+</tr>
+</table>
+<div class="references"></div>
+</div>
+<div class="tableNameHeading">
+<h1>tr001_trabalhador_perfil<a name="tr001_trabalhador_perfil"></a>
+</h1>
+<h2>
+      (Physical Name: tr001_trabalhador_perfil)
+      </h2>
+<p class="comment">Tabela de associa&ccedil;&atilde;o entre o trabalhador e os perfis do sistema</p>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id_perfil (PK)
+                &nbsp;(<a href="#tb001_perfil">FK</a>)
+              </td><td class="tdTableDefinition">id_perfil</td><td class="tdTableDefinition">BIGINT</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Identificador do perfil</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id_trabalhador (PK)
+                &nbsp;(<a href="#tb002_trabalhador">FK</a>)
+              </td><td class="tdTableDefinition">id_trabalhador</td><td class="tdTableDefinition">BIGINT</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Identificador unico do trabalhador</div>
+</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">References</p>
+<ul>
+<li>
+<a href="#tb001_perfil">tb001_perfil</a> through (id_perfil)</li>
+<li>
+<a href="#tb002_trabalhador">tb002_trabalhador</a> through (id_trabalhador)</li>
+</ul>
+</div>
+</div>
+</body>
+</html>

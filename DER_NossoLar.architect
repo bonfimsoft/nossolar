@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<architect-project version="1.0" appversion="1.0.7">
+ <project-name>DER_NossoLar</project-name>
+ <print-settings printerName="\\ba0000sr001\BA7470PR002" numCopies="2" zoom="0.62" pageNumbersPrinted="true" orientation="0" paperWidth="595.275590551181" paperHeight="841.8897637795276" leftBorder="50.00314960629921" rightBorder="50.00314960629917" topBorder="50.00314960629921" bottomBorder="50.00314960629928" />
+ <project-data-sources>
+  <data-source id="DS0">
+   <property key="Logical" value="Modelo de Dados" />
+  </data-source>
+  <data-source id="DS2">
+   <property key="Connection Type" value="PostgreSQL" />
+   <property key="Logical" value="nossolar" />
+   <property key="JDBC URL" value="jdbc:postgresql://localhost:5432/nossolar" />
+   <property key="UID" value="postgres" />
+   <property key="PWD" value="masterkey" />
+   <property key="ca.sqlpower.architect.etl.kettle.database" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.port" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.hostname" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.repos.login" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.repos.password" value="" />
+  </data-source>
+ </project-data-sources>
+ <source-databases>
+  <database id="DB0" populated="true" UUID="0f13ac33-7d56-49e4-abea-1958442ca067" dbcs-ref="DS2" name="nossolar" physicalName="nossolar" >
+   <catalog id="CAT1" populated="true" UUID="9e701325-b17a-4437-8a2e-2eaa19a0368d" name="nossolar" nativeTerm="database" physicalName="nossolar" >
+    <schema id="SCH2" populated="false" UUID="000ee93a-841d-441e-8579-3adc3e93d80a" name="information_schema" nativeTerm="schema" physicalName="information_schema" >
+    </schema>
+    <schema id="SCH3" populated="false" UUID="e0b1fa88-cbdc-4fc3-b143-c701933c9f07" name="pg_catalog" nativeTerm="schema" physicalName="pg_catalog" >
+    </schema>
+    <schema id="SCH4" populated="false" UUID="d4add063-4961-430f-99f2-81fde770befb" name="pg_toast_temp_1" nativeTerm="schema" physicalName="pg_toast_temp_1" >
+    </schema>
+    <schema id="SCH5" populated="true" UUID="15c756e4-9719-41c4-b849-2f1761847261" name="public" nativeTerm="schema" physicalName="public" >
+     <table id="TAB6" populated="true" UUID="f2506aa2-9afc-466d-92cc-585d75c2f4f5" name="colaborador_perfil" objectType="TABLE" physicalName="colaborador_perfil" >
+      <remarks></remarks>
+      <folder id="FOLTAB61" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL7" populated="true" UUID="129e9693-c702-49ae-90b0-280bdc1570b3" autoIncrement="false" defaultValue="" name="id_perfil" nullable="0" physicalName="id_perfil" precision="10" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL8" populated="true" UUID="337c80ad-5388-4f7d-af84-4252b852a366" autoIncrement="false" defaultValue="" name="id_colaborador" nullable="0" physicalName="id_colaborador" precision="10" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB63" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB62" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB64" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX9" populated="true" UUID="5fc66bf5-ee27-4631-bac8-280c55fcb51b" clustered="false" name="colaborador_perfil_pk" physicalName="colaborador_perfil_pk" primaryKeyIndex="true" unique="false" >
+       </index>
+      </folder>
+     </table>
+     <table id="TAB10" populated="true" UUID="f3a24b6c-64e8-45a3-980a-dcc05ea6e8cc" name="fnd001_trabalhador" objectType="TABLE" physicalName="fnd001_trabalhador" >
+      <remarks></remarks>
+      <folder id="FOLTAB101" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL11" populated="true" UUID="0ab78179-7136-4c00-9823-239eddd145c3" autoIncrement="true" defaultValue="nextval(&apos;colaborador_id_seq&apos;::regclass)" name="id" nullable="0" physicalName="id" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="serial" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL12" populated="true" UUID="29f98ba7-76c6-4dfc-8659-b04cd8dab1a0" autoIncrement="false" defaultValue="" name="nome" nullable="0" physicalName="nome" precision="2147483647" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL13" populated="true" UUID="0079e53c-59a9-4998-bf13-263101e3f0e4" autoIncrement="false" defaultValue="" name="cpf" nullable="0" physicalName="cpf" precision="2147483647" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL14" populated="true" UUID="beffeba2-f424-45aa-9ae6-c53cdf58dfa6" autoIncrement="false" defaultValue="" name="login" nullable="1" physicalName="login" precision="2147483647" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL15" populated="true" UUID="f7500878-6935-4a9d-8145-c3d8f0beef67" autoIncrement="false" defaultValue="" name="senha" nullable="1" physicalName="senha" precision="2147483647" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL16" populated="true" UUID="e7fdf526-db50-424e-9d29-fb4f07068223" autoIncrement="false" defaultValue="1" name="versao" nullable="1" physicalName="versao" precision="10" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB103" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB102" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB104" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX17" populated="true" UUID="b2d63770-9cf8-4052-9b28-811a0905bea6" clustered="false" index-type="BTREE" name="colaborador_pkey" physicalName="colaborador_pkey" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC18" populated="true" UUID="24958fa9-953b-4eb7-af41-39ed13a48594" ascendingOrDescending="UNSPECIFIED" column-ref="COL11" name="id" physicalName="id" />
+       </index>
+       <index id="IDX19" populated="true" UUID="797b63b2-9f74-4aad-a1f1-901785da0d30" clustered="false" index-type="BTREE" name="unique_cpf" physicalName="unique_cpf" primaryKeyIndex="false" unique="true" >
+        <index-column id="IDC20" populated="true" UUID="f2e6bf2e-3bbe-45d6-b8a6-78be8ffe947f" ascendingOrDescending="UNSPECIFIED" column-ref="COL13" name="cpf" physicalName="cpf" />
+       </index>
+       <index id="IDX21" populated="true" UUID="37c2e132-a021-4322-a77a-3e5e8d046eac" clustered="false" index-type="BTREE" name="unique_login" physicalName="unique_login" primaryKeyIndex="false" unique="true" >
+        <index-column id="IDC22" populated="true" UUID="6caac5b3-ec31-4d7b-881c-9b97f073eb93" ascendingOrDescending="UNSPECIFIED" column-ref="COL14" name="login" physicalName="login" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB23" populated="true" UUID="9e039ecd-4b6a-4edc-b0e7-c6548df92711" name="fnd002_perfil" objectType="TABLE" physicalName="fnd002_perfil" >
+      <remarks></remarks>
+      <folder id="FOLTAB231" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL24" populated="true" UUID="f20df535-ba2c-4863-8e21-fb95d54f59bf" autoIncrement="true" defaultValue="nextval(&apos;perfil_id_perfil_seq&apos;::regclass)" name="id" nullable="0" physicalName="id" precision="10" referenceCount="1" scale="0" sourceDataTypeName="serial" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL25" populated="true" UUID="086ac38d-ed16-4371-99b1-1b9afc901c4f" autoIncrement="false" defaultValue="" name="nome" nullable="0" physicalName="nome" precision="2147483647" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL26" populated="true" UUID="d369d1da-d7dd-4385-9755-7d415c48a6c0" autoIncrement="false" defaultValue="" name="descricao" nullable="0" physicalName="descricao" precision="2147483647" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL27" populated="true" UUID="6d359277-946b-4d50-9920-451498dde2a7" autoIncrement="false" defaultValue="1" name="versao" nullable="1" physicalName="versao" precision="10" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB233" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB232" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB234" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX28" populated="true" UUID="fb47c760-c7e5-409a-a329-4ac36c21828b" clustered="false" index-type="BTREE" name="perfil_pkey" physicalName="perfil_pkey" primaryKeyIndex="true" unique="true" >
+       </index>
+       <index id="IDX29" populated="true" UUID="e78a6a82-57d0-4e1f-bf44-82d1fb117d23" clustered="false" index-type="BTREE" name="unique_nome" physicalName="unique_nome" primaryKeyIndex="false" unique="true" >
+        <index-column id="IDC30" populated="true" UUID="afcd0d11-3408-407f-9f7d-e23818dbad31" ascendingOrDescending="UNSPECIFIED" column-ref="COL25" name="nome" physicalName="nome" />
+       </index>
+      </folder>
+     </table>
+    </schema>
+   </catalog>
+   <relationships>
+    <relationship id="REL31" populated="true" UUID="37df112b-54e2-42a4-8eee-369b62731708" deferrability="7" deleteRule="3" fk-table-ref="TAB6" fkCardinality="7" identifying="false" name="colaborador_perfil_id_colaborador_fkey" physicalName="colaborador_perfil_id_colaborador_fkey" pk-table-ref="TAB10" pkCardinality="2" updateRule="3" >
+     <column-mapping id="CMP32" populated="true" UUID="78970639-a4be-4f49-9a5f-88d6703fb9b8" fk-column-ref="COL8" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL11" />
+    </relationship>
+    <relationship id="REL33" populated="true" UUID="09232e95-dc18-4330-926a-5f8e0c2f0216" deferrability="7" deleteRule="3" fk-table-ref="TAB6" fkCardinality="7" identifying="false" name="colaborador_perfil_id_perfil_fkey" physicalName="colaborador_perfil_id_perfil_fkey" pk-table-ref="TAB23" pkCardinality="2" updateRule="3" >
+     <column-mapping id="CMP34" populated="true" UUID="aaa3023e-73dd-449a-a9c0-578e0700a58e" fk-column-ref="COL7" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL24" />
+    </relationship>
+   </relationships>
+  </database>
+ </source-databases>
+ <target-database id="ppdb" dbcs-ref="DS0">
+  <table id="TAB36" populated="true" UUID="d29ab2ae-e36b-4dff-a8d4-58505e472419" name="tb001_perfil" objectType="TABLE" physicalName="tb001_perfil" >
+   <remarks>Tabela responsavel pelo armazenamento dos perfis dos sistema</remarks>
+   <folder id="FOLTAB361" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL37" populated="true" UUID="650ab4e1-b624-4135-9895-3c350d1e707c" autoIncrement="true" autoIncrementSequenceName="tb001_perfil_id_perfil_seq" defaultValue="" name="id_perfil" nullable="0" physicalName="id_perfil" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="-5" userDefinedTypeUUID="433cc8af-284d-4abb-8ef7-08ebcb34dbf1" >
+     <remarks>Identificador do perfil</remarks>
+    </column>
+    <column id="COL38" populated="true" UUID="9eca7f90-32dc-4b3f-a510-1f90e8741dac" autoIncrement="false" autoIncrementSequenceName="tb001_perfil_nu_versao_seq" defaultValue="" name="nu_versao" nullable="0" physicalName="nu_versao" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Numero da versão do registro. Utilizado para controle de persistencia.</remarks>
+    </column>
+    <column id="COL39" populated="true" UUID="b484ef81-da90-4e13-b1e9-15b5827e75ab" autoIncrement="false" autoIncrementSequenceName="fnd001_perfil_nome_seq" defaultValue="" name="no_perfil" nullable="0" physicalName="no_perfil" precision="80" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Nome de identificação do perfil</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB363" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB362" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB364" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX40" populated="true" UUID="3735f915-2ede-4fb3-85a2-9e8d79ac9e1e" clustered="false" name="tb001_perfil_pk" physicalName="tb001_perfil_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC41" populated="true" UUID="f0ab283d-791f-4389-afe9-9ed9e2debfaf" ascendingOrDescending="UNSPECIFIED" column-ref="COL37" name="id_perfil" physicalName="id_perfil" />
+    </index>
+    <index id="IDX42" populated="true" UUID="70038a57-90b6-4a4b-b466-dbda792a934d" clustered="false" name="fnd001_perfil_uidx" physicalName="fnd001_perfil_uidx" primaryKeyIndex="false" unique="true" >
+     <index-column id="IDC43" populated="true" UUID="d3c44fe2-3bfb-478a-9df6-7a730c962f8f" ascendingOrDescending="UNSPECIFIED" column-ref="COL39" name="no_perfil" physicalName="no_perfil" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB44" populated="true" UUID="6b249a53-77b6-41ba-a85d-db25b82c9610" name="tb002_trabalhador" objectType="TABLE" physicalName="tb002_trabalhador" >
+   <remarks>Tabela responsavel pelo armazenamento de dados dos trabalhadores do centro. Os trabalhadores podem ter acesso ao sistema ou não. Para ter acesso é necessario ter a senha cadastrada e perfis associados.</remarks>
+   <folder id="FOLTAB441" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL45" populated="true" UUID="7278cb88-31c2-4481-b8e4-5aaed291bab1" autoIncrement="true" autoIncrementSequenceName="tb002_trabalhador_id_trabalhador_seq" defaultValue="" name="id_trabalhador" nullable="0" physicalName="id_trabalhador" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="-5" userDefinedTypeUUID="433cc8af-284d-4abb-8ef7-08ebcb34dbf1" >
+     <remarks>Identificador unico do trabalhador</remarks>
+    </column>
+    <column id="COL46" populated="true" UUID="8eb002ed-ab05-420d-bf09-bad2e3a2160e" autoIncrement="false" autoIncrementSequenceName="tb002_trabalhador_nu_versao_seq" defaultValue="" name="nu_versao" nullable="0" physicalName="nu_versao" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Numero da versão do registro</remarks>
+    </column>
+    <column id="COL47" populated="true" UUID="9fe4761b-7e12-459a-9d7c-0421624809cd" autoIncrement="false" autoIncrementSequenceName="tb002_trabalhador_matricula_seq" defaultValue="" name="co_matricula" nullable="0" physicalName="co_matricula" precision="20" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Matricula do trabalhador junto ao centro</remarks>
+    </column>
+    <column id="COL48" populated="true" UUID="8221cfbe-5fec-4c72-903a-128d5065f9cb" autoIncrement="false" autoIncrementSequenceName="tb002_trabalhador_senha_seq" defaultValue="" name="co_senha" nullable="1" physicalName="co_senha" precision="80" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Senha criptografada de acesso ao sistema.</remarks>
+    </column>
+    <column id="COL49" populated="true" UUID="c2a617a7-9783-493c-8435-063d2a2bf37b" autoIncrement="false" autoIncrementSequenceName="tb002_trabalhador_nome_seq" defaultValue="" name="no_trabalhador" nullable="0" physicalName="no_trabalhador" precision="80" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Nome completo do trabalhador</remarks>
+    </column>
+    <column id="COL50" populated="true" UUID="68c5fe0e-ccec-466f-9135-3e61ce9fb274" autoIncrement="false" autoIncrementSequenceName="tb002_trabalhador_nome_cracha_seq" defaultValue="" name="no_cracha" nullable="0" physicalName="no_cracha" precision="20" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Nome de exibição no cracha do trabalhador</remarks>
+    </column>
+    <column id="COL51" populated="true" UUID="d01bc6b1-ab0e-41f7-83d3-885a2b7d3ce1" autoIncrement="false" autoIncrementSequenceName="tb002_trabalhador_endereco_seq" defaultValue="" name="ed_trabalhador" nullable="0" physicalName="ed_trabalhador" precision="255" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Endereço do trabalhador</remarks>
+    </column>
+    <column id="COL52" populated="true" UUID="7cafc0c2-22b9-4d72-98b1-a10362ee8738" autoIncrement="false" autoIncrementSequenceName="tb002_trabalhador_bairro_seq" defaultValue="" name="no_bairro" nullable="0" physicalName="no_bairro" precision="80" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Bairro de moradia do trabalhador</remarks>
+    </column>
+    <column id="COL53" populated="true" UUID="78443fa7-cc42-4612-a346-d5f9eba49032" autoIncrement="false" autoIncrementSequenceName="tb002_trabalhador_cidade_seq" defaultValue="" name="no_cidade" nullable="0" physicalName="no_cidade" precision="80" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Cidade de moradia do trabalhador</remarks>
+    </column>
+    <column id="COL54" populated="true" UUID="83ee9c68-2677-41d4-8d81-e8a188dfecc4" autoIncrement="false" autoIncrementSequenceName="tb002_trabalhador_uf_seq" defaultValue="" name="sg_uf" nullable="0" physicalName="sg_uf" precision="2" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Unidade de federação de moradia do trabalhador</remarks>
+    </column>
+    <column id="COL55" populated="true" UUID="7ee34e04-4454-4479-b9f9-b4a88bb0da27" autoIncrement="false" autoIncrementSequenceName="tb002_trabalhador_cep_seq" defaultValue="" name="co_cep" nullable="1" physicalName="co_cep" precision="8" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>CEP de moradia do trabalhador</remarks>
+    </column>
+    <column id="COL56" populated="true" UUID="968be9da-e8c1-4a4e-b854-03bfda3460b7" autoIncrement="false" autoIncrementSequenceName="tb002_trabalhador_data_nascimento_seq" defaultValue="" name="dt_nascimento" nullable="0" physicalName="dt_nascimento" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks>Data de nascimento do trabalhador</remarks>
+    </column>
+    <column id="COL57" populated="true" UUID="a5cf3044-2a7c-45e1-8caa-1183cd7227d9" autoIncrement="false" autoIncrementSequenceName="tb002_trabalhador_cpf_seq" defaultValue="" name="co_cpf" nullable="0" physicalName="co_cpf" precision="11" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Número de identificação do CPF do trabalhador</remarks>
+    </column>
+    <column id="COL58" populated="true" UUID="f9c3cbc9-6502-440b-872c-d0e3721257fc" autoIncrement="false" autoIncrementSequenceName="tb002_trabalhador_rg_seq" defaultValue="" name="co_rg" nullable="1" physicalName="co_rg" precision="15" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Número do RG do trabalhdor</remarks>
+    </column>
+    <column id="COL59" populated="true" UUID="6d21b768-10e8-40fc-957d-76854f30aeb3" autoIncrement="false" autoIncrementSequenceName="tb002_trabalhador_profissao_seq" defaultValue="" name="de_profissao" nullable="0" physicalName="de_profissao" precision="80" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Descrição da profissão do trabalhador</remarks>
+    </column>
+    <column id="COL60" populated="true" UUID="34bcc208-b3e0-4e30-9c4b-c1e959d1c3ec" autoIncrement="false" autoIncrementSequenceName="tb002_trabalhador_sexo_seq" defaultValue="" name="ic_sexo" nullable="0" physicalName="ic_sexo" precision="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Identificador do sexo do trabalhador:
+M - Masculino
+F - Feminino</remarks>
+    </column>
+    <column id="COL61" populated="true" UUID="2e341dda-a38e-4238-b878-fdf23a808dcd" autoIncrement="false" autoIncrementSequenceName="tb002_trabalhador_foto_seq" defaultValue="" name="im_foto" nullable="1" physicalName="im_foto" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2005" userDefinedTypeUUID="9c22ed40-2868-4d9e-96ca-789234a53c8f" >
+     <remarks>Armazena a foto do trabalhador</remarks>
+    </column>
+    <column id="COL62" populated="true" UUID="e7307f26-95d5-439f-a6a9-145cb2551984" autoIncrement="false" autoIncrementSequenceName="tb002_trabalhador_email1_seq" defaultValue="" name="de_email1" nullable="0" physicalName="de_email1" precision="80" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Email de contato do trabalhador</remarks>
+    </column>
+    <column id="COL63" populated="true" UUID="4384a8c5-0526-42da-8a5a-9f90f17ed394" autoIncrement="false" autoIncrementSequenceName="tb002_trabalhador_email2_seq" defaultValue="" name="de_email2" nullable="1" physicalName="de_email2" precision="80" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Email de contato do trabalhador</remarks>
+    </column>
+    <column id="COL64" populated="true" UUID="14031c31-7310-4c5a-9f3e-678badb9f40e" autoIncrement="false" autoIncrementSequenceName="tb002_trabalhador_telefone1_seq" defaultValue="" name="de_telefone1" nullable="0" physicalName="de_telefone1" precision="20" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Telefone de contato do trabalhador</remarks>
+    </column>
+    <column id="COL65" populated="true" UUID="abc9ddf1-a63d-4b7e-8d2a-c3cf0c8471ce" autoIncrement="false" autoIncrementSequenceName="tb002_trabalhador_telefone2_seq" defaultValue="" name="de_telefone2" nullable="1" physicalName="de_telefone2" precision="20" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Telefone de contato do trabalhador</remarks>
+    </column>
+    <column id="COL66" populated="true" UUID="a10f3331-edc2-46f3-9290-7c0fc990ea32" autoIncrement="false" autoIncrementSequenceName="tb002_trabalhador_telefone3_seq" defaultValue="" name="de_telefone3" nullable="1" physicalName="de_telefone3" precision="20" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Telefone de contato do trabalhador</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB443" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB442" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB444" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX67" populated="true" UUID="9ec85030-5672-401d-a5f0-f9fd78b8048d" clustered="false" name="tb002_trabalhador_pk" physicalName="tb002_trabalhador_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC68" populated="true" UUID="b041ca74-13f7-4dda-87f8-dec23e5b69ca" ascendingOrDescending="UNSPECIFIED" column-ref="COL45" name="id_trabalhador" physicalName="id_trabalhador" />
+    </index>
+    <index id="IDX69" populated="true" UUID="58d6ffbc-9768-46a5-a183-c8b9ad79df45" clustered="false" name="fnd002_trabalhador_uidx" physicalName="fnd002_trabalhador_uidx" primaryKeyIndex="false" unique="true" >
+     <index-column id="IDC70" populated="true" UUID="07e6ac55-7a0f-4ec9-9e12-d51ae74fe67e" ascendingOrDescending="UNSPECIFIED" column-ref="COL57" name="co_cpf" physicalName="co_cpf" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB71" populated="true" UUID="b500e3bb-e319-4ba2-81a6-5b844843f5a8" name="tr001_trabalhador_perfil" objectType="TABLE" physicalName="tr001_trabalhador_perfil" >
+   <remarks>Tabela de associação entre o trabalhador e os perfis do sistema</remarks>
+   <folder id="FOLTAB711" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL72" populated="true" UUID="d04e0e81-a2f4-4517-b7ab-2a82fe704b00" autoIncrement="false" autoIncrementSequenceName="tr001_trabalhador_perfil_id_perfil_seq" defaultValue="" name="id_perfil" nullable="0" physicalName="id_perfil" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="-5" userDefinedTypeUUID="433cc8af-284d-4abb-8ef7-08ebcb34dbf1" >
+     <remarks>Identificador do perfil</remarks>
+    </column>
+    <column id="COL73" populated="true" UUID="dd4e4b0e-4c89-430b-a359-ec89e4c695e2" autoIncrement="false" autoIncrementSequenceName="tr001_trabalhador_perfil_id_trabalhador_seq" defaultValue="" name="id_trabalhador" nullable="0" physicalName="id_trabalhador" precision="0" primaryKeySeq="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="-5" userDefinedTypeUUID="433cc8af-284d-4abb-8ef7-08ebcb34dbf1" >
+     <remarks>Identificador unico do trabalhador</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB713" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB712" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB714" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX74" populated="true" UUID="623ad236-9a15-4e7d-b1cf-c0996db090d6" clustered="false" name="tr001_trabalhador_perfil_pk" physicalName="tr001_trabalhador_perfil_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC75" populated="true" UUID="39c7cbea-1b7c-46b4-9de2-355a4db3a654" ascendingOrDescending="UNSPECIFIED" column-ref="COL72" name="id_perfil" physicalName="id_perfil" />
+     <index-column id="IDC76" populated="true" UUID="6f198cc6-1ecb-41ec-bb71-fa6a8c0c6dcc" ascendingOrDescending="UNSPECIFIED" column-ref="COL73" name="id_trabalhador" physicalName="id_trabalhador" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB77" populated="true" UUID="eb5dfbba-7527-498b-a85f-d21934ef74ef" name="tb003_paciente" objectType="TABLE" physicalName="tb003_paciente" >
+   <remarks>Tabela responsavel pelo armazenamento de dados dos pacientes do centro.</remarks>
+   <folder id="FOLTAB771" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL78" populated="true" UUID="50296529-758d-46e5-aa55-710fee54c240" autoIncrement="true" autoIncrementSequenceName="tb003_paciente_id_paciente_seq" defaultValue="" name="id_paciente" nullable="0" physicalName="id_paciente" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="-5" userDefinedTypeUUID="433cc8af-284d-4abb-8ef7-08ebcb34dbf1" >
+     <remarks>Identificador unico do paciente</remarks>
+    </column>
+    <column id="COL79" populated="true" UUID="a0228bb9-7389-4881-a6c1-8b2442fb09b8" autoIncrement="false" autoIncrementSequenceName="tb001_perfil_nu_versao_seq" defaultValue="" name="nu_versao" nullable="0" physicalName="nu_versao" precision="0" referenceCount="1" scale="0" source-column-ref="COL38" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Numero da versão do registro. Utilizado para controle de persistencia.</remarks>
+    </column>
+    <column id="COL80" populated="true" UUID="a6777fa9-a1cd-4cce-897e-0963283cd801" autoIncrement="false" autoIncrementSequenceName="tb003_paciente_nome_seq" defaultValue="" name="no_paciente" nullable="0" physicalName="no_paciente" precision="80" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Nome completo do paciente</remarks>
+    </column>
+    <column id="COL81" populated="true" UUID="aee27280-bf1f-4267-9365-9d3601bcd2a2" autoIncrement="false" autoIncrementSequenceName="tb003_paciente_endereco_seq" defaultValue="" name="ed_paciente" nullable="0" physicalName="ed_paciente" precision="255" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Endereço do paciente</remarks>
+    </column>
+    <column id="COL82" populated="true" UUID="0c4c89fa-29ae-497c-88a7-b5821a764a0e" autoIncrement="false" autoIncrementSequenceName="tb003_paciente_bairro_seq" defaultValue="" name="no_bairro" nullable="0" physicalName="no_bairro" precision="80" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Bairro de moradia do paciente</remarks>
+    </column>
+    <column id="COL83" populated="true" UUID="26bc2c3e-1145-4235-ad78-fef3b00d55d2" autoIncrement="false" autoIncrementSequenceName="tb003_paciente_cidade_seq" defaultValue="" name="no_cidade" nullable="0" physicalName="no_cidade" precision="80" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Cidade de moradia do paciente</remarks>
+    </column>
+    <column id="COL84" populated="true" UUID="577a5223-1bb0-404d-be20-c506d44dcd84" autoIncrement="false" autoIncrementSequenceName="tb003_paciente_uf_seq" defaultValue="" name="sg_uf" nullable="0" physicalName="sg_uf" precision="2" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Unidade de federação de moradia do paciente</remarks>
+    </column>
+    <column id="COL85" populated="true" UUID="25d79d96-58ac-4a49-bd4e-4663af8ba975" autoIncrement="false" autoIncrementSequenceName="tb003_paciente_cep_seq" defaultValue="" name="co_cep" nullable="1" physicalName="co_cep" precision="8" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>CEP de moradia do paciente</remarks>
+    </column>
+    <column id="COL86" populated="true" UUID="6c045ee4-198c-465d-b265-183b68783ba2" autoIncrement="false" autoIncrementSequenceName="tb003_paciente_data_nascimento_seq" defaultValue="" name="dt_nascimento" nullable="0" physicalName="dt_nascimento" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks>Data de nascimento do paciente</remarks>
+    </column>
+    <column id="COL87" populated="true" UUID="9ec0c710-9650-40af-b3fd-8414ca20882e" autoIncrement="false" autoIncrementSequenceName="tb003_paciente_sexo_seq" defaultValue="" name="ic_sexo" nullable="0" physicalName="ic_sexo" precision="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+     <remarks>Identificador do sexo do paciente:
+M - Masculino
+F - Feminino</remarks>
+    </column>
+    <column id="COL88" populated="true" UUID="8d4d9129-d669-4a68-a916-9fbcb71af342" autoIncrement="false" autoIncrementSequenceName="tb003_paciente_religiao_seq" defaultValue="" name="de_religiao" nullable="1" physicalName="de_religiao" precision="80" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Nome da religião do paciente</remarks>
+    </column>
+    <column id="COL89" populated="true" UUID="26067dcd-d9d4-4d5d-8e05-15df9565c42f" autoIncrement="false" autoIncrementSequenceName="tb003_paciente_profissao_seq" defaultValue="" name="de_profissao" nullable="0" physicalName="de_profissao" precision="80" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Descrição da profissão do paciente</remarks>
+    </column>
+    <column id="COL90" populated="true" UUID="95f5ecae-676a-4e4b-ad58-0495d55d09d7" autoIncrement="false" autoIncrementSequenceName="tb003_paciente_email_seq" defaultValue="" name="de_email" nullable="1" physicalName="de_email" precision="80" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Email de contato do paciente</remarks>
+    </column>
+    <column id="COL91" populated="true" UUID="ec54a9ba-75a0-446e-836b-434bd1eff750" autoIncrement="false" autoIncrementSequenceName="tb003_paciente_telefone1_seq" defaultValue="" name="de_telefone1" nullable="0" physicalName="de_telefone1" precision="20" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Telefone de contato do paciente</remarks>
+    </column>
+    <column id="COL92" populated="true" UUID="a56b1967-bb28-44a0-aff7-7e330e24ea4e" autoIncrement="false" autoIncrementSequenceName="tb003_paciente_telefone2_seq" defaultValue="" name="de_telefone2" nullable="1" physicalName="de_telefone2" precision="20" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Telefone de contato do paciente</remarks>
+    </column>
+    <column id="COL93" populated="true" UUID="a06bb4d9-42ff-47a6-a8d9-97e4addcd162" autoIncrement="false" autoIncrementSequenceName="tb003_paciente_telefone3_seq" defaultValue="" name="de_telefone3" nullable="1" physicalName="de_telefone3" precision="20" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Telefone de contato do paciente</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB773" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB772" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB774" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX94" populated="true" UUID="b576196a-6c0c-49fc-9650-d1b445c71ad9" clustered="false" name="tb003_paciente_pk" physicalName="tb003_paciente_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC95" populated="true" UUID="3797f112-ee64-4657-b928-249cc3b94e43" ascendingOrDescending="UNSPECIFIED" column-ref="COL78" name="id_paciente" physicalName="id_paciente" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB96" populated="true" UUID="405aaab3-0c35-458d-a803-0e0a7f8ecd7c" name="tb012_feriado" objectType="TABLE" physicalName="tb012_feriado" >
+   <remarks>Tabela que armazena os dias que não devem existir atividades no centro</remarks>
+   <folder id="FOLTAB961" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL97" populated="true" UUID="8ff6a47f-58e2-46e9-b0c1-fc341a6e9292" autoIncrement="true" autoIncrementSequenceName="tb012_feriado_id_feriado_seq" defaultValue="" name="id_feriado" nullable="0" physicalName="id_feriado" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="-5" userDefinedTypeUUID="433cc8af-284d-4abb-8ef7-08ebcb34dbf1" >
+     <remarks>Identificador do registro que representa a data que não deve haver atividades no centro</remarks>
+    </column>
+    <column id="COL98" populated="true" UUID="c1a2dfe3-4637-4137-a0d4-5d0d3418a826" autoIncrement="false" autoIncrementSequenceName="tb001_perfil_nu_versao_seq" defaultValue="" name="nu_versao" nullable="0" physicalName="nu_versao" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Numero da versão do registro. Utilizado para controle de persistencia.</remarks>
+    </column>
+    <column id="COL99" populated="true" UUID="768dc51e-e6ed-474f-bf6e-1384c28891ee" autoIncrement="false" autoIncrementSequenceName="tb012_feriado_nome_seq" defaultValue="" name="no_feriado" nullable="0" physicalName="no_feriado" precision="80" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Nome de identificação do feriado / data de inatividade do centro</remarks>
+    </column>
+    <column id="COL100" populated="true" UUID="33db2919-3002-4c0a-915a-18098065cc96" autoIncrement="false" autoIncrementSequenceName="tb012_feriado_data_feriado_seq" defaultValue="" name="dt_feriado" nullable="0" physicalName="dt_feriado" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks>Data do feriado / data de inatividade do centro</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB963" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB962" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB964" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX101" populated="true" UUID="73ba2ae8-a097-4f8f-bf17-cf3e7d80e1e8" clustered="false" name="tb012_feriado_pk" physicalName="tb012_feriado_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC102" populated="true" UUID="6d59ef16-cd7e-4d1e-a29f-49369d1e6d99" ascendingOrDescending="UNSPECIFIED" column-ref="COL97" name="id_feriado" physicalName="id_feriado" />
+    </index>
+    <index id="IDX103" populated="true" UUID="d973b05b-9e49-4dc9-b52b-a3aaff961ce7" clustered="false" name="fnd004_feriado_uidx" physicalName="fnd004_feriado_uidx" primaryKeyIndex="false" unique="true" >
+     <index-column id="IDC104" populated="true" UUID="26adfcae-7cf9-4f45-b612-ab77c4f924f3" ascendingOrDescending="UNSPECIFIED" column-ref="COL100" name="dt_feriado" physicalName="dt_feriado" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB105" populated="true" UUID="8055ddd9-b9fc-45e7-b62f-d7c70a702a2b" name="tb008_atendimento" objectType="TABLE" physicalName="tb008_atendimento" >
+   <remarks>Tabela responsavel pelo controle de atendimento aos pacientes</remarks>
+   <folder id="FOLTAB1051" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL106" populated="true" UUID="f9cd8e28-2939-406c-99fd-ae0be57c3d47" autoIncrement="true" autoIncrementSequenceName="tb008_atendimento_id_atendimento_seq" defaultValue="" name="id_atendimento" nullable="0" physicalName="id_atendimento" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="-5" userDefinedTypeUUID="433cc8af-284d-4abb-8ef7-08ebcb34dbf1" >
+     <remarks>Identificador do atendimento realizado ao paciente</remarks>
+    </column>
+    <column id="COL107" populated="true" UUID="f06d9c2b-e695-44d1-a444-d285a2d40f8b" autoIncrement="false" autoIncrementSequenceName="tb008_atendimento_nu_versao_seq" defaultValue="" name="nu_versao" nullable="0" physicalName="nu_versao" precision="0" referenceCount="1" scale="0" source-column-ref="COL38" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Numero da versão do registro. Utilizado para controle de persistencia.</remarks>
+    </column>
+    <column id="COL108" populated="true" UUID="f2ce2c67-939a-434f-a1a0-001e535c3369" autoIncrement="false" autoIncrementSequenceName="tb008_atendimento_id_paciente_seq" defaultValue="" name="id_paciente" nullable="0" physicalName="id_paciente" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="-5" userDefinedTypeUUID="433cc8af-284d-4abb-8ef7-08ebcb34dbf1" >
+     <remarks>Identificador unico do paciente</remarks>
+    </column>
+    <column id="COL109" populated="true" UUID="7c44e937-76b5-4b95-b05d-3d3c3552abb7" autoIncrement="false" autoIncrementSequenceName="tb008_atendimento_data_inicio_seq" defaultValue="" name="dt_inicio" nullable="0" physicalName="dt_inicio" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks>Data de registro do inicio do atendimento ao paciente</remarks>
+    </column>
+    <column id="COL110" populated="true" UUID="ec9c46a6-9d29-473e-a9e6-f06478478555" autoIncrement="false" autoIncrementSequenceName="atn001_atendimento_d_seq" defaultValue="" name="dt_fim" nullable="1" physicalName="dt_fim" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks>Data de registro do fim do atendimento ao paciente</remarks>
+    </column>
+    <column id="COL111" populated="true" UUID="f0b73064-01b8-4bf9-b54b-50ab1477baa7" autoIncrement="false" autoIncrementSequenceName="tb008_atendimento_situacao_seq" defaultValue="" name="ic_situacao" nullable="0" physicalName="ic_situacao" precision="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+     <remarks>Situação atual do atendimento podendo assumir:
+A - Em Andamento
+C - Concluido
+I - Interrompido</remarks>
+    </column>
+    <column id="COL112" populated="true" UUID="5ef362b1-2c5e-4e6d-8596-69d915a892cf" autoIncrement="false" autoIncrementSequenceName="atn001_atendimento_dia_semana_seq" defaultValue="" name="ic_dias" nullable="1" physicalName="ic_dias" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Identifica o(s) dia(s) da semana que o paciente pode ser atendido, com base no padrão UFBA.
+1:DOM;2:SEG;4:TER;8:QUA;16:QUI;32:SEX;64:SAB;
+
+Ex: Paciente atendido TER e QUI = 20</remarks>
+    </column>
+    <column id="COL113" populated="true" UUID="e0eac15a-5cfb-48e5-a9db-82b6551b97ad" autoIncrement="false" autoIncrementSequenceName="tb010_entrevista_tratamento_medico_seq" defaultValue="" name="ic_tratamento_medico" nullable="1" physicalName="ic_tratamento_medico" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="16" userDefinedTypeUUID="a26374aa-3026-4bb8-b564-eb2e186dfa5d" >
+     <remarks>Identifica se o entrevistado esta realizando algum tratamento medico. Caso nulo significa que a resposta não foi informada.</remarks>
+    </column>
+    <column id="COL114" populated="true" UUID="f0ae7e80-1d9e-4be0-9651-0a27757547c8" autoIncrement="false" autoIncrementSequenceName="tb010_entrevista_tratamento_psicologico_seq" defaultValue="" name="ic_tratamento_psicologico" nullable="1" physicalName="ic_tratamento_psicologico" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="16" userDefinedTypeUUID="a26374aa-3026-4bb8-b564-eb2e186dfa5d" >
+     <remarks>Identifica se o entrevistado esta realizando algum tratamento psicologico. Caso nulo significa que a resposta não foi informada.</remarks>
+    </column>
+    <column id="COL115" populated="true" UUID="99034845-23b5-44ae-971e-3a2caa1eefcf" autoIncrement="false" autoIncrementSequenceName="tb010_entrevista_tratamento_psiquiatrico_seq" defaultValue="" name="ic_tratamento_psiquiatrico" nullable="1" physicalName="ic_tratamento_psiquiatrico" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="16" userDefinedTypeUUID="a26374aa-3026-4bb8-b564-eb2e186dfa5d" >
+     <remarks>Identifica se o entrevistado esta realizando algum tratamento psiquiatrico. Caso nulo significa que a resposta não foi informada.</remarks>
+    </column>
+    <column id="COL116" populated="true" UUID="9fafb3be-9642-43e1-ad9e-49fc3d4b85ec" autoIncrement="false" autoIncrementSequenceName="tb010_entrevista_tratamento_espiritual_seq" defaultValue="" name="ic_tratamento_espiritual" nullable="1" physicalName="ic_tratamento_espiritual" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="16" userDefinedTypeUUID="a26374aa-3026-4bb8-b564-eb2e186dfa5d" >
+     <remarks>Identifica se o entrevistado já realizou algum tratamento espiritual. Caso nulo significa que a resposta não foi informada.</remarks>
+    </column>
+    <column id="COL117" populated="true" UUID="c31da87b-05eb-4793-90c3-d3755590a2cd" autoIncrement="false" autoIncrementSequenceName="tb010_entrevista_evangelho_lar_seq" defaultValue="" name="ic_evangelho_lar" nullable="1" physicalName="ic_evangelho_lar" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="16" userDefinedTypeUUID="a26374aa-3026-4bb8-b564-eb2e186dfa5d" >
+     <remarks>Identifica se o entrevistado realiza o evangelho em casa. Caso nulo significa que a resposta não foi informada.</remarks>
+    </column>
+    <column id="COL118" populated="true" UUID="c225537f-2f9e-4218-a94e-cdff8574b8f3" autoIncrement="false" autoIncrementSequenceName="tb010_entrevista_leitura_livros_seq" defaultValue="" name="ic_leitura_livros" nullable="1" physicalName="ic_leitura_livros" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="16" userDefinedTypeUUID="a26374aa-3026-4bb8-b564-eb2e186dfa5d" >
+     <remarks>Identifica se o entrevistado realiza leitura de livros espiritas. Caso nulo significa que a resposta não foi informada.</remarks>
+    </column>
+    <column id="COL119" populated="true" UUID="674566d3-cc10-49f6-b924-500f535cbf88" autoIncrement="false" autoIncrementSequenceName="tb010_entrevista_uso_medicamento_seq" defaultValue="" name="ic_uso_medicamento" nullable="1" physicalName="ic_uso_medicamento" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="16" userDefinedTypeUUID="a26374aa-3026-4bb8-b564-eb2e186dfa5d" >
+     <remarks>Identifica se o entrevistado esta realizando uso de medicamentos. Caso nulo significa que a resposta não foi informada.</remarks>
+    </column>
+    <column id="COL120" populated="true" UUID="eda493e6-3c1b-41c1-a008-dfab56d3e536" autoIncrement="false" autoIncrementSequenceName="tb010_entrevista_descricao_medicamentos_seq" defaultValue="" name="de_medicamentos" nullable="1" physicalName="de_medicamentos" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="-1" userDefinedTypeUUID="9a814859-ab26-4acd-9415-ea82291bcac1" >
+     <remarks>Armazena o nome dos medicamentos utilizados que foram informados pelo paciente no momento da entrevista.</remarks>
+    </column>
+    <column id="COL121" populated="true" UUID="a04a431f-31db-4ebe-81a8-7d4094f6ea14" autoIncrement="false" autoIncrementSequenceName="tb008_atendimento_proprio_seq" defaultValue="" name="ic_proprio" nullable="0" physicalName="ic_proprio" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="16" userDefinedTypeUUID="a26374aa-3026-4bb8-b564-eb2e186dfa5d" >
+     <remarks>Identifica se o atendimento é proprio (true) ou para terceiros (false)</remarks>
+    </column>
+    <column id="COL122" populated="true" UUID="dfc13944-24ce-4428-9611-31c1f857c7b1" autoIncrement="false" autoIncrementSequenceName="tb008_atendimento_responsavel_seq" defaultValue="" name="no_responsavel" nullable="1" physicalName="no_responsavel" precision="80" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Nome da pessoa responsavel pelo atendimento quando o atendimento é para terceiros (proprio=false)</remarks>
+    </column>
+    <column id="COL123" populated="true" UUID="cffb7eac-104a-4f64-8770-75042e94d771" autoIncrement="false" autoIncrementSequenceName="tb008_atendimento_relacionamento_seq" defaultValue="" name="no_relacionamento" nullable="1" physicalName="no_relacionamento" precision="40" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Registro do relacionamento da pessoa responsavel pelo atendimento quando o atendimento é para terceiros (proprio=false)</remarks>
+    </column>
+    <column id="COL124" populated="true" UUID="54c81012-df03-4883-ae2b-55d2d1d05e45" autoIncrement="false" autoIncrementSequenceName="tb008_atendimento_telefone_seq" defaultValue="" name="de_telefone" nullable="1" physicalName="de_telefone" precision="20" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Telefone da pessoa responsavel pelo atendimento quando o atendimento é para terceiros (proprio=false)</remarks>
+    </column>
+    <column id="COL125" populated="true" UUID="1471d14f-9a64-4c00-9732-11f04d92a65f" autoIncrement="false" autoIncrementSequenceName="tb008_atendimento_email_seq" defaultValue="" name="de_email" nullable="1" physicalName="de_email" precision="80" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Email da pessoa responsavel pelo atendimento quando o atendimento é para terceiros (proprio=false)</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB1053" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB1052" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB1054" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX126" populated="true" UUID="d0b3162b-42e0-49dd-9058-906de55aea3c" clustered="false" name="tb008_atendimento_pk" physicalName="tb008_atendimento_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC127" populated="true" UUID="750afd8f-db6c-458b-a717-f3fda461d5fb" ascendingOrDescending="UNSPECIFIED" column-ref="COL106" name="id_atendimento" physicalName="id_atendimento" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB128" populated="true" UUID="7c1c02f9-fbce-41c9-8696-7aa26a1ce595" name="tb010_entrevista" objectType="TABLE" physicalName="tb010_entrevista" >
+   <remarks>Tabela responsavel pelo controle de entrevistas realizadas com os pacientes.</remarks>
+   <folder id="FOLTAB1281" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL129" populated="true" UUID="b91237dd-e169-41b0-8197-34f84b9d44be" autoIncrement="true" autoIncrementSequenceName="tb010_entrevista_id_entrevista_seq" defaultValue="" name="id_entrevista" nullable="0" physicalName="id_entrevista" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="-5" userDefinedTypeUUID="433cc8af-284d-4abb-8ef7-08ebcb34dbf1" >
+     <remarks>Identificador da entrevista</remarks>
+    </column>
+    <column id="COL130" populated="true" UUID="846ce411-f66e-4eb0-918f-78478748f91a" autoIncrement="false" autoIncrementSequenceName="tb001_perfil_nu_versao_seq" defaultValue="" name="nu_versao" nullable="0" physicalName="nu_versao" precision="0" referenceCount="1" scale="0" source-column-ref="COL38" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Numero da versão do registro. Utilizado para controle de persistencia.</remarks>
+    </column>
+    <column id="COL131" populated="true" UUID="6f37d125-ff44-42e0-b90e-df4db437d073" autoIncrement="false" autoIncrementSequenceName="tb010_entrevista_id_atendimento_seq" defaultValue="" name="id_atendimento" nullable="0" physicalName="id_atendimento" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="-5" userDefinedTypeUUID="433cc8af-284d-4abb-8ef7-08ebcb34dbf1" >
+     <remarks>Identificador do atendimento realizado ao paciente</remarks>
+    </column>
+    <column id="COL132" populated="true" UUID="0091e421-87df-45d3-8402-421dc0c57a51" autoIncrement="false" autoIncrementSequenceName="tb010_entrevista_data_entrevista_seq" defaultValue="" name="dt_entrevista" nullable="0" physicalName="dt_entrevista" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks>Data de realização da entrevista</remarks>
+    </column>
+    <column id="COL133" populated="true" UUID="f9d2b21f-8636-4a08-b50c-989fa490ef8b" autoIncrement="false" autoIncrementSequenceName="tb010_entrevista_nome_entrevistador_seq" defaultValue="" name="no_entrevistador" nullable="0" physicalName="no_entrevistador" precision="80" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Nome do trabalhador que realizou a entrevista</remarks>
+    </column>
+    <column id="COL134" populated="true" UUID="251d91b3-9c35-4a85-88ec-2c9b0e261a3f" autoIncrement="false" autoIncrementSequenceName="tb010_entrevista_tipo_entrevista_seq" defaultValue="" name="ic_tipo_entrevista" nullable="0" physicalName="ic_tipo_entrevista" precision="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+     <remarks>Identifica o tipo de entrevista realizada:
+I = Inicial
+F = Final
+C = Complementar</remarks>
+    </column>
+    <column id="COL135" populated="true" UUID="4af43b3b-3332-474d-8fce-fee1e9224c88" autoIncrement="false" autoIncrementSequenceName="tb010_entrevista_observacao_seq" defaultValue="" name="de_observacao" nullable="1" physicalName="de_observacao" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="-1" userDefinedTypeUUID="9a814859-ab26-4acd-9415-ea82291bcac1" >
+     <remarks>Campos destinado a observações gerais da entrevista</remarks>
+    </column>
+    <column id="COL136" populated="true" UUID="de26480f-d78d-498a-8c67-d6c1fdea9b7d" autoIncrement="false" autoIncrementSequenceName="tb010_entrevista_apresenta_melhoras_seq" defaultValue="" name="ic_apresenta_melhoras" nullable="0" physicalName="ic_apresenta_melhoras" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="16" userDefinedTypeUUID="a26374aa-3026-4bb8-b564-eb2e186dfa5d" >
+     <remarks>Indicativo se o paciente apresentou mehoras desde a ultima entrevista.</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB1283" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB1282" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB1284" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX137" populated="true" UUID="834a9d4f-dd62-4047-8dbc-e6afc678c9a6" clustered="false" name="tb010_entrevista_pk" physicalName="tb010_entrevista_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC138" populated="true" UUID="ef434ce3-fddb-4cb9-ade0-72011692a4dd" ascendingOrDescending="UNSPECIFIED" column-ref="COL129" name="id_entrevista" physicalName="id_entrevista" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB139" populated="true" UUID="c1dcca39-c6e4-4691-9056-932af150bbac" name="tb011_problema" objectType="TABLE" physicalName="tb011_problema" >
+   <remarks>Tabela responsavel pelo controle de problemas dos atendimentos identificados nas entrevistas realizadas com os pacientes.</remarks>
+   <folder id="FOLTAB1391" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL140" populated="true" UUID="132b0af7-e1bd-4c9c-a9ee-62eda1499c8b" autoIncrement="true" autoIncrementSequenceName="tb011_problema_id_problema_seq" defaultValue="" name="id_problema" nullable="0" physicalName="id_problema" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="-5" userDefinedTypeUUID="433cc8af-284d-4abb-8ef7-08ebcb34dbf1" >
+     <remarks>Identificador unico do problemado paciente.</remarks>
+    </column>
+    <column id="COL141" populated="true" UUID="b4cc5369-c04d-409e-a87b-2bbed4645c1f" autoIncrement="false" autoIncrementSequenceName="tb001_perfil_nu_versao_seq" defaultValue="" name="nu_versao" nullable="0" physicalName="nu_versao" precision="0" referenceCount="1" scale="0" source-column-ref="COL38" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Numero da versão do registro. Utilizado para controle de persistencia.</remarks>
+    </column>
+    <column id="COL142" populated="true" UUID="9af0aea5-4df5-4364-ace5-18b8877d3dbd" autoIncrement="false" autoIncrementSequenceName="tb011_problema_id_tipo_problema_seq" defaultValue="" name="id_tipo_problema" nullable="0" physicalName="id_tipo_problema" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="-5" userDefinedTypeUUID="433cc8af-284d-4abb-8ef7-08ebcb34dbf1" >
+     <remarks>Identificador do tipo de problema</remarks>
+    </column>
+    <column id="COL143" populated="true" UUID="c490f2fb-fbcc-4169-897f-e591d4155b74" autoIncrement="false" autoIncrementSequenceName="tb008_atendimento_id_atendimento_seq" defaultValue="" name="id_atendimento" nullable="0" physicalName="id_atendimento" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="-5" userDefinedTypeUUID="433cc8af-284d-4abb-8ef7-08ebcb34dbf1" >
+     <remarks>Identificador do atendimento realizado ao paciente</remarks>
+    </column>
+    <column id="COL144" populated="true" UUID="46058b95-09d4-4df8-a3ef-ad6695e181ae" autoIncrement="false" autoIncrementSequenceName="tb011_problema_detalhe_problema_seq" defaultValue="" name="de_problema" nullable="1" physicalName="de_problema" precision="255" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Este campo deve ser preenchido quando o campo do tipo de problema é preenchido com um registro que possui o campo aberto marcado como verdade.</remarks>
+    </column>
+    <column id="COL145" populated="true" UUID="92dcf2c8-2db7-471b-adc6-9daacfd6f3aa" autoIncrement="false" autoIncrementSequenceName="tb011_problema_observacao_seq" defaultValue="" name="de_observacao" nullable="1" physicalName="de_observacao" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="-1" userDefinedTypeUUID="9a814859-ab26-4acd-9415-ea82291bcac1" >
+     <remarks>Campo de observações referente ao problema identificado.</remarks>
+    </column>
+    <column id="COL146" populated="true" UUID="6fdb4758-0896-4917-9396-04a2a3e41a7e" autoIncrement="false" autoIncrementSequenceName="tb011_problema_escala_seq" defaultValue="" name="vr_escala" nullable="0" physicalName="vr_escala" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Escala de gravidade do problema identificado variando de 0 a 10 sendo:
+0 - Extinção
+1 a 10 - Nível de gravidade do problema</remarks>
+    </column>
+    <column id="COL147" populated="true" UUID="316f33fe-2119-4182-a45e-e8b6da4a0acb" autoIncrement="false" autoIncrementSequenceName="tb011_problema_dt_registro_seq" defaultValue="" name="dt_registro" nullable="0" physicalName="dt_registro" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks>Data de registro do problema</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB1393" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB1392" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB1394" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX148" populated="true" UUID="930af687-3dbe-4771-bfea-cba969b9d04e" clustered="false" name="tb011_problema_pk" physicalName="tb011_problema_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC149" populated="true" UUID="2f87bb6b-de68-48ee-a57a-bba65112f14e" ascendingOrDescending="UNSPECIFIED" column-ref="COL140" name="id_problema" physicalName="id_problema" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB150" populated="true" UUID="7a69ca37-f9d7-48e4-931f-893ef331bd31" name="tb007_tipo_problema" objectType="TABLE" physicalName="tb007_tipo_problema" >
+   <remarks>Tabela responsavel pelo controle dos tipos de problemas que podem ser identificados nas entrevistas realizadas com os pacientes.</remarks>
+   <folder id="FOLTAB1501" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL151" populated="true" UUID="58467e55-1cc0-4037-a6fa-db6229154d40" autoIncrement="true" autoIncrementSequenceName="tb007_tipo_problema_id_tipo_problema_seq" defaultValue="" name="id_tipo_problema" nullable="0" physicalName="id_tipo_problema" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="-5" userDefinedTypeUUID="433cc8af-284d-4abb-8ef7-08ebcb34dbf1" >
+     <remarks>Identificador do tipo de problema</remarks>
+    </column>
+    <column id="COL152" populated="true" UUID="69e72c6a-85b7-4272-94cf-388fa6b06287" autoIncrement="false" autoIncrementSequenceName="tb001_perfil_nu_versao_seq" defaultValue="" name="nu_versao" nullable="0" physicalName="nu_versao" precision="0" referenceCount="1" scale="0" source-column-ref="COL38" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Numero da versão do registro. Utilizado para controle de persistencia.</remarks>
+    </column>
+    <column id="COL153" populated="true" UUID="f598b7ae-0c2d-478b-b597-bbaa2fa4f43e" autoIncrement="false" autoIncrementSequenceName="tb007_tipo_problema_nome_seq" defaultValue="" name="no_tipo_problema" nullable="0" physicalName="no_tipo_problema" precision="80" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Nome do tipo de problema</remarks>
+    </column>
+    <column id="COL154" populated="true" UUID="ac6c297a-5038-4b6a-bc19-6eae9ee74cec" autoIncrement="false" autoIncrementSequenceName="tb007_tipo_problema_aberto_seq" defaultValue="" name="ic_aberto" nullable="0" physicalName="ic_aberto" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="16" userDefinedTypeUUID="a26374aa-3026-4bb8-b564-eb2e186dfa5d" >
+     <remarks>Indica se o tipo de problema é descritivo ou não. Caso este campo seja marcado como verdadeiro, ao selecionar o tipo de problema o usuário deverá informar a descrição mais detalhada do problema identificado e será armazenado na tabela de problema.</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB1503" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB1502" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB1504" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX155" populated="true" UUID="a37e0615-fc98-4693-ab55-1312b6a245aa" clustered="false" name="tb007_tipo_problema_pk" physicalName="tb007_tipo_problema_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC156" populated="true" UUID="0865c14c-21b8-4f56-95ff-eb8d241983d2" ascendingOrDescending="UNSPECIFIED" column-ref="COL151" name="id_tipo_problema" physicalName="id_tipo_problema" />
+    </index>
+    <index id="IDX157" populated="true" UUID="bb6c9357-68f8-419c-a36e-863efc5699b0" clustered="false" name="atn004_tipo_problema_uidx" physicalName="atn004_tipo_problema_uidx" primaryKeyIndex="false" unique="true" >
+     <index-column id="IDC158" populated="true" UUID="cd0de8c9-9be5-4a8c-b505-b9348f4fbc61" ascendingOrDescending="UNSPECIFIED" column-ref="COL153" name="no_tipo_problema" physicalName="no_tipo_problema" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB159" populated="true" UUID="26829cf1-3d02-4323-8371-531ee68fa7b8" name="tb009_tratamento" objectType="TABLE" physicalName="tb009_tratamento" >
+   <remarks>Tabela responsavel pelo controle de tratamentos do atendimento dos pacientes.</remarks>
+   <folder id="FOLTAB1591" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL160" populated="true" UUID="97691837-4317-4650-9396-4497a5e39ef8" autoIncrement="true" autoIncrementSequenceName="tb009_tratamento_id_tratamento_seq" defaultValue="" name="id_tratamento" nullable="0" physicalName="id_tratamento" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="-5" userDefinedTypeUUID="433cc8af-284d-4abb-8ef7-08ebcb34dbf1" >
+     <remarks>Identificador do tratamento realizado dentro do atendimento.</remarks>
+    </column>
+    <column id="COL161" populated="true" UUID="040a9db0-f69b-4648-9638-72a95abf0abf" autoIncrement="false" autoIncrementSequenceName="tb009_tratamento_nu_versao_seq" defaultValue="" name="nu_versao" nullable="0" physicalName="nu_versao" precision="0" referenceCount="1" scale="0" source-column-ref="COL38" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Numero da versão do registro. Utilizado para controle de persistencia.</remarks>
+    </column>
+    <column id="COL162" populated="true" UUID="8c486f1b-e93f-4658-aee4-99ec1778dd20" autoIncrement="false" autoIncrementSequenceName="tb009_tratamento_id_atendimento_seq" defaultValue="" name="id_atendimento" nullable="0" physicalName="id_atendimento" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="-5" userDefinedTypeUUID="433cc8af-284d-4abb-8ef7-08ebcb34dbf1" >
+     <remarks>Identificador do atendimento realizado ao paciente</remarks>
+    </column>
+    <column id="COL163" populated="true" UUID="3fac3e5c-9c67-4021-8c12-c4b3652a759e" autoIncrement="false" autoIncrementSequenceName="atn006_tipo_tratamento_id_tratamento_seq" defaultValue="" name="id_tipo_tratamento" nullable="0" physicalName="id_tipo_tratamento" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="-5" userDefinedTypeUUID="433cc8af-284d-4abb-8ef7-08ebcb34dbf1" >
+     <remarks>Identificador do tipo de tratamento a ser realizado.</remarks>
+    </column>
+    <column id="COL164" populated="true" UUID="42325cdf-e33a-49e3-9867-a329d7d83fe1" autoIncrement="false" autoIncrementSequenceName="tb009_tratamento_id_livro_seq" defaultValue="" name="id_livro" nullable="1" physicalName="id_livro" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="-5" userDefinedTypeUUID="433cc8af-284d-4abb-8ef7-08ebcb34dbf1" >
+     <remarks>Identificador do livro</remarks>
+    </column>
+    <column id="COL165" populated="true" UUID="62609418-95f4-4b4d-aef4-c4ad9b0fdaea" autoIncrement="false" autoIncrementSequenceName="tb009_tratamento_id_compromisso_seq" defaultValue="" name="id_compromisso" nullable="1" physicalName="id_compromisso" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="-5" userDefinedTypeUUID="433cc8af-284d-4abb-8ef7-08ebcb34dbf1" >
+     <remarks>Identificador do compromisso</remarks>
+    </column>
+    <column id="COL166" populated="true" UUID="599f1550-d204-4ece-a50a-f5c176c29fd1" autoIncrement="false" autoIncrementSequenceName="tb009_tratamento_dt_registro_seq" defaultValue="" name="dt_registro" nullable="0" physicalName="dt_registro" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks>Data de registro do compromisso</remarks>
+    </column>
+    <column id="COL167" populated="true" UUID="ae6d327e-3ca4-4393-95df-70f5da51b34d" autoIncrement="false" autoIncrementSequenceName="tb009_tratamento_data_passe_seq" defaultValue="" name="dt_passe" nullable="1" physicalName="dt_passe" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks>Data agendada para a realização do passe no tratamento do paciente. Esta data só é preenchida quando o tipo de tratamento possui um formato de &quot;P&quot; (PASSE)</remarks>
+    </column>
+    <column id="COL168" populated="true" UUID="7bdaba64-8a5b-40ba-bb96-fedb2a418029" autoIncrement="false" autoIncrementSequenceName="tb009_tratamento_remarcado_seq" defaultValue="" name="ic_remarcado" nullable="1" physicalName="ic_remarcado" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="16" userDefinedTypeUUID="a26374aa-3026-4bb8-b564-eb2e186dfa5d" >
+     <remarks>Indicativo se o tratamento foi remarcado automaticamente pelo sistema</remarks>
+    </column>
+    <column id="COL169" populated="true" UUID="9c9b9e9d-dbec-4475-b239-987ece7964c2" autoIncrement="false" autoIncrementSequenceName="tb009_tratamento_realizado_seq" defaultValue="" name="ic_realizado" nullable="1" physicalName="ic_realizado" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="16" userDefinedTypeUUID="a26374aa-3026-4bb8-b564-eb2e186dfa5d" >
+     <remarks>Indica se o tratamento foi já foi realizado / iniciado ou não.</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB1593" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB1592" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB1594" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX170" populated="true" UUID="16fe30d8-cc01-4f22-80a0-605ce06d7fd1" clustered="false" name="tb009_tratamento_pk" physicalName="tb009_tratamento_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC171" populated="true" UUID="9e0a29ea-2a33-4232-96b0-6143b4506f12" ascendingOrDescending="UNSPECIFIED" column-ref="COL160" name="id_tratamento" physicalName="id_tratamento" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB172" populated="true" UUID="fc4b7d1a-af7c-4cc7-8bdf-f00c7bcd2ea9" name="tb006_tipo_tratamento" objectType="TABLE" physicalName="tb006_tipo_tratamento" >
+   <remarks>Tabela responsavel pelo controle dos tipos de atendimento que podem ser realizados com os pacientes.</remarks>
+   <folder id="FOLTAB1721" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL173" populated="true" UUID="e33fadc8-cdf5-4386-a9dc-69ca4bf3ea0e" autoIncrement="true" autoIncrementSequenceName="tb006_tipo_tratamento_id_tratamento_seq" defaultValue="" name="id_tipo_tratamento" nullable="0" physicalName="id_tipo_tratamento" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="-5" userDefinedTypeUUID="433cc8af-284d-4abb-8ef7-08ebcb34dbf1" >
+     <remarks>Identificador do tipo de tratamento a ser realizado.</remarks>
+    </column>
+    <column id="COL174" populated="true" UUID="c4fc1e1a-4618-4d1a-96f8-931884f17f0e" autoIncrement="false" autoIncrementSequenceName="tb001_perfil_nu_versao_seq" defaultValue="" name="nu_versao" nullable="0" physicalName="nu_versao" precision="0" referenceCount="1" scale="0" source-column-ref="COL38" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Numero da versão do registro. Utilizado para controle de persistencia.</remarks>
+    </column>
+    <column id="COL175" populated="true" UUID="825200ba-1c85-46e9-b3f3-ffd79dd5bcbc" autoIncrement="false" autoIncrementSequenceName="tb006_tipo_tratamento_nome_seq" defaultValue="" name="no_tipo_tratamento" nullable="0" physicalName="no_tipo_tratamento" precision="80" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Nome do tratamento realizado</remarks>
+    </column>
+    <column id="COL176" populated="true" UUID="e06b78a9-15ee-4d4c-a8fe-d6839dd21e6f" autoIncrement="false" autoIncrementSequenceName="tb006_tipo_tratamento_formato_seq" defaultValue="" name="ic_formato" nullable="0" physicalName="ic_formato" precision="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+     <remarks>Identifica o formato do tipo de tratamento podendo assumir os valores:
+P = Passe
+L = Leitura
+C = Compromiso</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB1723" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB1722" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB1724" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX177" populated="true" UUID="8e21ef69-db25-4620-8648-cbe836facd1c" clustered="false" name="tb006_tipo_tratamento_pk" physicalName="tb006_tipo_tratamento_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC178" populated="true" UUID="f94ed1bc-2b6c-47e0-b09b-c8ed8df40b27" ascendingOrDescending="UNSPECIFIED" column-ref="COL173" name="id_tipo_tratamento" physicalName="id_tipo_tratamento" />
+    </index>
+    <index id="IDX179" populated="true" UUID="3b2e2c92-70a2-4bc3-a2f3-0d5efd6e50f0" clustered="false" name="atn006_tipo_tratamento_uidx" physicalName="atn006_tipo_tratamento_uidx" primaryKeyIndex="false" unique="true" >
+     <index-column id="IDC180" populated="true" UUID="1e240970-b26c-4b8f-ac5c-cc333324b17b" ascendingOrDescending="UNSPECIFIED" column-ref="COL175" name="no_tipo_tratamento" physicalName="no_tipo_tratamento" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB181" populated="true" UUID="381a8ff0-ce8e-4d5d-88c0-d383c5acc830" name="tb005_livro" objectType="TABLE" physicalName="tb005_livro" >
+   <remarks>Tabela responsavel pelo armazenamento dos livros que podem ser indicados para leitura.</remarks>
+   <folder id="FOLTAB1811" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL182" populated="true" UUID="a8ab8572-e937-4118-8f89-49c31c5cb3cd" autoIncrement="true" autoIncrementSequenceName="tb005_livro_id_livro_seq" defaultValue="" name="id_livro" nullable="0" physicalName="id_livro" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="-5" userDefinedTypeUUID="433cc8af-284d-4abb-8ef7-08ebcb34dbf1" >
+     <remarks>Identificador do livro</remarks>
+    </column>
+    <column id="COL183" populated="true" UUID="3892a779-680b-4b99-aa75-cb750b967cf0" autoIncrement="false" autoIncrementSequenceName="tb001_perfil_nu_versao_seq" defaultValue="" name="nu_versao" nullable="0" physicalName="nu_versao" precision="0" referenceCount="1" scale="0" source-column-ref="COL38" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Numero da versão do registro. Utilizado para controle de persistencia.</remarks>
+    </column>
+    <column id="COL184" populated="true" UUID="47f01629-286f-4044-bb0d-bccb79130866" autoIncrement="false" autoIncrementSequenceName="tb005_livro_titulo_seq" defaultValue="" name="no_titulo" nullable="0" physicalName="no_titulo" precision="80" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Titulo do livro a ser indicado para leitura</remarks>
+    </column>
+    <column id="COL185" populated="true" UUID="94ca61d8-c3d3-42a9-b363-4fabe8445178" autoIncrement="false" autoIncrementSequenceName="tb005_livro_autor_seq" defaultValue="" name="no_autor" nullable="1" physicalName="no_autor" precision="80" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Nome do autor do livro a ser indicado para leitura.</remarks>
+    </column>
+    <column id="COL186" populated="true" UUID="2a6f4fc9-852d-40a5-b7c7-f0bbcab2a0d3" autoIncrement="false" autoIncrementSequenceName="tb005_livro_ativo_seq" defaultValue="" name="ic_ativo" nullable="0" physicalName="ic_ativo" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="16" userDefinedTypeUUID="a26374aa-3026-4bb8-b564-eb2e186dfa5d" >
+     <remarks>Indicador se o livro esta ativo e pode ser indicado para leitura.</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB1813" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB1812" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB1814" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX187" populated="true" UUID="0175b739-0cd3-4986-bad6-6c997f1d3ba8" clustered="false" name="tb005_livro_pk" physicalName="tb005_livro_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC188" populated="true" UUID="b3e3e201-3914-4df0-a33d-3404456bbac0" ascendingOrDescending="UNSPECIFIED" column-ref="COL182" name="id_livro" physicalName="id_livro" />
+    </index>
+    <index id="IDX189" populated="true" UUID="54e93324-25f9-4100-8fe2-4a6d95a54f0e" clustered="false" name="atn007_livro_uidx" physicalName="atn007_livro_uidx" primaryKeyIndex="false" unique="true" >
+     <index-column id="IDC190" populated="true" UUID="586a821e-bccf-41a8-8fe9-26347bad9025" ascendingOrDescending="UNSPECIFIED" column-ref="COL184" name="no_titulo" physicalName="no_titulo" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB191" populated="true" UUID="5d9131b6-e685-4660-bebc-057d446185ef" name="tb004_compromisso" objectType="TABLE" physicalName="tb004_compromisso" >
+   <remarks>Tabela responsavel pelo armazenamento dos compromissos que podem ser indicados para o tratamento dos pacientes.</remarks>
+   <folder id="FOLTAB1911" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL192" populated="true" UUID="a209d8f4-27a5-4f42-bde6-5b2b1755f059" autoIncrement="true" autoIncrementSequenceName="tb004_compromisso_id_compromisso_seq" defaultValue="" name="id_compromisso" nullable="0" physicalName="id_compromisso" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="-5" userDefinedTypeUUID="433cc8af-284d-4abb-8ef7-08ebcb34dbf1" >
+     <remarks>Identificador do compromisso</remarks>
+    </column>
+    <column id="COL193" populated="true" UUID="bd9897a4-782e-4e74-b859-bb4dec9752f4" autoIncrement="false" autoIncrementSequenceName="tb001_perfil_nu_versao_seq" defaultValue="" name="nu_versao" nullable="0" physicalName="nu_versao" precision="0" referenceCount="1" scale="0" source-column-ref="COL38" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Numero da versão do registro. Utilizado para controle de persistencia.</remarks>
+    </column>
+    <column id="COL194" populated="true" UUID="cae34456-8d35-4a19-a147-8d5f991cd2b0" autoIncrement="false" autoIncrementSequenceName="tb004_compromisso_nome_seq" defaultValue="" name="no_compromisso" nullable="0" physicalName="no_compromisso" precision="80" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Nome do compromisso a ser indicado para o tratamento.</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB1913" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB1912" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB1914" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX195" populated="true" UUID="235db222-c0c2-4efa-bd7f-8b9712592075" clustered="false" name="tb004_compromisso_pk" physicalName="tb004_compromisso_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC196" populated="true" UUID="8e9f8cdd-c109-43e9-a964-6eb04df0380f" ascendingOrDescending="UNSPECIFIED" column-ref="COL192" name="id_compromisso" physicalName="id_compromisso" />
+    </index>
+    <index id="IDX197" populated="true" UUID="58280b2b-72fc-4764-a835-eb4f3e65371e" clustered="false" name="atn008_compromisso_uidx" physicalName="atn008_compromisso_uidx" primaryKeyIndex="false" unique="true" >
+     <index-column id="IDC198" populated="true" UUID="89e32cad-82a3-4719-a69e-1343a2ff08ca" ascendingOrDescending="UNSPECIFIED" column-ref="COL194" name="no_compromisso" physicalName="no_compromisso" />
+    </index>
+   </folder>
+  </table>
+  <relationships>
+   <relationship id="REL199" populated="true" UUID="9321eb28-f05e-4962-a714-74a6f3e5b99e" deferrability="7" deleteRule="3" fk-table-ref="TAB71" fkCardinality="7" identifying="true" name="fnd001_perfil_fdn_trabalhador_perfil_fk" physicalName="fnd001_perfil_fdn_trabalhador_perfil_fk" pk-table-ref="TAB36" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP200" populated="true" UUID="e5340724-90ab-47bb-8c2f-e012c8786ce3" fk-column-ref="COL72" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL37" />
+   </relationship>
+   <relationship id="REL201" populated="true" UUID="6df02f82-62d9-4052-a674-40ddcc925322" deferrability="7" deleteRule="3" fk-table-ref="TAB71" fkCardinality="7" identifying="true" name="fnd002_trabalhador_fdn_trabalhador_perfil_fk" physicalName="fnd002_trabalhador_fdn_trabalhador_perfil_fk" pk-table-ref="TAB44" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP202" populated="true" UUID="acf6ecfb-d2ce-4312-bdcc-12a73f0dbf67" fk-column-ref="COL73" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL45" />
+   </relationship>
+   <relationship id="REL203" populated="true" UUID="4eaf21be-93ce-4c01-9fe1-6ba0d3e20f05" deferrability="7" deleteRule="3" fk-table-ref="TAB105" fkCardinality="7" identifying="false" name="fnd003_paciente_atn001_atendimento_fk" physicalName="fnd003_paciente_atn001_atendimento_fk" pk-table-ref="TAB77" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP204" populated="true" UUID="bbb9d062-7df2-413f-a666-2fe7f04a609a" fk-column-ref="COL108" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL78" />
+   </relationship>
+   <relationship id="REL205" populated="true" UUID="838253b9-6a31-435f-b6dc-210e0a5d2733" deferrability="7" deleteRule="3" fk-table-ref="TAB128" fkCardinality="7" identifying="false" name="atn001_atendimento_atn002_entrevista_fk" physicalName="atn001_atendimento_atn002_entrevista_fk" pk-table-ref="TAB105" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP206" populated="true" UUID="7b6ef6fd-0cbc-4b5b-a32e-38640a0aba8b" fk-column-ref="COL131" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL106" />
+   </relationship>
+   <relationship id="REL207" populated="true" UUID="79368d1e-8b39-43e0-abea-7e9c14a6408c" deferrability="7" deleteRule="3" fk-table-ref="TAB159" fkCardinality="7" identifying="false" name="atn001_atendimento_atn005_tratamento_fk" physicalName="atn001_atendimento_atn005_tratamento_fk" pk-table-ref="TAB105" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP208" populated="true" UUID="d0e7fcbb-2c1d-44a1-a469-22a8550b46ea" fk-column-ref="COL162" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL106" />
+   </relationship>
+   <relationship id="REL209" populated="true" UUID="20f54047-9472-4ac2-9fd2-e1ad98441711" deferrability="7" deleteRule="3" fk-table-ref="TAB139" fkCardinality="7" identifying="false" name="tb008_atendimento_tb011_problema_fk" physicalName="tb008_atendimento_tb011_problema_fk" pk-table-ref="TAB105" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP210" populated="true" UUID="1ad44d5c-aaf6-4f0c-beff-50a162ba10b2" fk-column-ref="COL143" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL106" />
+   </relationship>
+   <relationship id="REL211" populated="true" UUID="5e8b1e56-49f8-4d17-a73a-e11aa7d63212" deferrability="7" deleteRule="3" fk-table-ref="TAB139" fkCardinality="7" identifying="false" name="atn005_tipo_problema_atn003_problema_fk" physicalName="atn005_tipo_problema_atn003_problema_fk" pk-table-ref="TAB150" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP212" populated="true" UUID="08f41184-dfb0-4f15-a036-b7a320d66a5f" fk-column-ref="COL142" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL151" />
+   </relationship>
+   <relationship id="REL213" populated="true" UUID="86f775d6-fcaa-4e06-b5fc-bd78996bd1aa" deferrability="7" deleteRule="3" fk-table-ref="TAB159" fkCardinality="7" identifying="false" name="atn006_tipo_tratamento_atn005_tratamento_fk" physicalName="atn006_tipo_tratamento_atn005_tratamento_fk" pk-table-ref="TAB172" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP214" populated="true" UUID="909930a5-fc6f-4232-ab48-07c8ea3326f6" fk-column-ref="COL163" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL173" />
+   </relationship>
+   <relationship id="REL215" populated="true" UUID="6045fc30-949a-40d2-a3a1-da5f18f479fd" deferrability="7" deleteRule="3" fk-table-ref="TAB159" fkCardinality="7" identifying="false" name="atn007_livro_atn005_tratamento_fk" physicalName="atn007_livro_atn005_tratamento_fk" pk-table-ref="TAB181" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP216" populated="true" UUID="43dbd6b3-13f9-4504-bf1b-2db8439c5621" fk-column-ref="COL164" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL182" />
+   </relationship>
+   <relationship id="REL217" populated="true" UUID="25d02589-e10d-4e19-8ccf-32fe128219d8" deferrability="7" deleteRule="3" fk-table-ref="TAB159" fkCardinality="7" identifying="false" name="atn008_compromisso_atn005_tratamento_fk" physicalName="atn008_compromisso_atn005_tratamento_fk" pk-table-ref="TAB191" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP218" populated="true" UUID="40f732d3-8558-41e1-bab4-ac37acaf0ff9" fk-column-ref="COL165" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL192" />
+   </relationship>
+  </relationships>
+ </target-database>
+ <ddl-generator type="ca.sqlpower.architect.ddl.GenericDDLGenerator" allow-connection="true"> </ddl-generator>
+ <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
+ <compare-dm-settings  ddlGenerator="ca.sqlpower.architect.ddl.PostgresDDLGenerator"  outputFormatAsString="SQL"  saveFlag="true" >
+  <source-stuff   datastoreTypeAsString="DATABASE"   connectName="nossolar"   filePath=""  />
+  <target-stuff   datastoreTypeAsString="PROJECT"   filePath=""  />
+  <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
+ </compare-dm-settings>
+ <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
+ <play-pen zoom="0.8408964152537145" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+  <table-pane table-ref="TAB36" x="29" y="482" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB44" x="254" y="180" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB71" x="32" y="316" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB77" x="467" y="85" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB96" x="39" y="189" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB105" x="680" y="26" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB128" x="948" y="51" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB139" x="950" y="337" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB150" x="939" y="580" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB159" x="677" y="445" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB172" x="663" y="686" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB181" x="467" y="563" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB191" x="445" y="380" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-link relationship-ref="REL199" pkConnection="0.5" fkConnection="0.4883720930232558" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="72"/>
+  <table-link relationship-ref="REL201" pkConnection="0.4891640866873065" fkConnection="0.49122807017543857" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL203" pkConnection="0.3263598326359833" fkConnection="0.5737704918032787" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL205" pkConnection="0.4972677595628415" fkConnection="0.4560669456066946" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL211" pkConnection="0.49444444444444446" fkConnection="0.5055555555555555" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="72"/>
+  <table-link relationship-ref="REL207" pkConnection="0.49707602339181284" fkConnection="0.5319148936170213" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL213" pkConnection="0.4946808510638298" fkConnection="0.5053191489361702" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="72"/>
+  <table-link relationship-ref="REL215" pkConnection="0.5984848484848485" fkConnection="0.5815602836879432" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="40"/>
+  <table-link relationship-ref="REL217" pkConnection="0.5862068965517241" fkConnection="0.3475177304964539" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="36"/>
+  <table-link relationship-ref="REL209" pkConnection="0.6810810810810811" fkConnection="0.4881889763779528" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="36"/>
+ </play-pen>
+ <critic-manager>
+  <critic-grouping platformType="Generic" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.PrimaryKeyCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.RelationshipMappingTypeCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.EmptyRelationshipCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.AlphaNumericNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.AlphaNumericSequenceNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SetDefaultOnColumnWithNoDefaultCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SetNullOnNonNullableColumnCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.DuplicateNameCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="DB2" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.DB2UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="H2" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.H2UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="HSQLDB" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.HSQLDBUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="MySQL" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLCommentCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLReservedWordsCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="Oracle" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OraclePhysicalNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OracleReservedWordsCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OracleUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="PostgreSQL" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.PostgreSQLReservedWordsCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServerUnsupportedFeaturesCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServerReservedWordsCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server 2000" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServer2000UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server 2005" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServer2005UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+ </critic-manager>
+ <profiles topNCount="10">
+  </profiles>
+  <olap>
+  </olap>
+  <olap-gui>
+  </olap-gui>
+</architect-project>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<link rel="stylesheet" media="screen" href="css/bootstrap.css" />
+<link rel="stylesheet" media="screen" href="css/integration_DT_Bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="css/datepicker3.css"/>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<link rel="stylesheet" type="text/css" href="css/bootstrapValidator.css"/>
+
+<script type="text/javascript" src="js/jquery-2.0.3.min.js" ></script>
+<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="js/integration_DT_Bootstrap.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="js/locales/bootstrap-datepicker.pt-BR.js"></script>
+<script type="text/javascript" src="js/--bootstrapValidator.js"></script>
+<script type="text/javascript" src="js/language/pt_BR.js" ></script>
+<script type="text/javascript" src="js/jquery-mask-plugin.js"></script>
+<script type="text/javascript" src="js/geral.js" ></script>
+
+<title>Paciente-novo</title>
+</head>
+	<body>
+            <!-- Static navbar -->
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">NOSSO LAR  </a>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="#">Consulta</a></li>
+                <li class="Cadastro active">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cadastro <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Trabalhador</a></li>
+                    <li><a href="#">Paciente</a></li>
+                    <li><a href="#">Compromisso</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Entrevista</a></li>
+                  </ul>
+                </li>
+              </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                    <a href="#" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Fábio Seixas Sales<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#perfil"><span class="glyphicon glyphicon-user"></span> Perfil</a></li>
+                        <li class="divider"></li>
+                        <li><a href="login.html"><span class="glyphicon glyphicon-log-out"></span> Sair</a></li>
+                    </ul>
+                    </li>
+                </ul>
+              
+            </div><!--/.nav-collapse -->
+          </div>
+        </div>
+    
+        <div class="container">
+        
+            <ol class="breadcrumb">
+                <li><a href="#">Cadastro</a></li>
+                <li class="active">Paciente</li>
+                <li class="active">Novo Paciente</li>
+            </ol>
+            
+           
+            <h2>Novo Paciente</h2>
+            <hr>
+            <!-----------------------------------------------------------
+             class= alert-success alert-info alert-warning alert-danger
+             ------------------------------------------------------------>
+            <div class="alert alert-success" role="alert">
+            	<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            	Cadastro realizado com sucesso.
+            </div><!--Fim alert-->
+            <form role="form" id="containerForm">
+                
+                <div class="form-group">
+                  <div class="col-md-12">
+                  	<div id="messages"></div>
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-1">
+                            <label for="tb003_id_paciente">ID</label>
+                            <input type="text" id="tb003_id_paciente" class="form-control"  placeholder="0020"  disabled>                        
+                        </div>
+                        <div class="col-md-5">
+                            <label for="tb003_no_trabalhador">Nome</label>
+                            <input type="text" id="tb003_no_trabalhador" class="form-control">                        
+                        </div>
+                        <div class="col-md-6">
+                            <label for="tb003_ed_trabalhador">Endereço</label>
+                            <input type="text" id="tb003_ed_trabalhador" class="form-control">                        
+                        </div>
+                    </div>
+                    										
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="tb003_no_bairro">Bairro</label>
+                            <input type="text" id="tb003_no_bairro" class="form-control">                        
+                        </div>
+                        <div class="col-md-3">
+                            <label for="tb003_no_cidade">Cidade</label>
+                            <input type="text" id="tb003_no_cidade" class="form-control">                        
+                        </div>
+                        
+                        <div class="col-md-1">
+                            <label for="tb003_sg_uf">UF</label>
+                            <select id="tb003_sg_uf" class="form-control">
+                              <option value="00"selected>--</option>
+                              <option value="01">AC</option>
+                              <option value="02">AL</option>
+                              <option value="03">AM</option>
+                              <option value="04">BA</option>
+                              <option value="05">CE</option>
+                              <option value="06">DF</option>
+                              <option value="07">ES</option>
+                              <option value="08">GO</option>
+                              <option value="09">AP</option>
+                              <option value="10">MA</option>
+                              <option value="11">MT</option>
+                              <option value="12">MS</option>
+                              <option value="13">MG</option>
+                              <option value="14">PA</option>
+                              <option value="15">PB</option>
+                              <option value="16">PR</option>
+                              <option value="17">PB</option>
+                              <option value="18">PI</option>
+                              <option value="19">RJ</option>
+                              <option value="20">RN</option>
+                              <option value="21">RS</option>  
+                              <option value="22">RO</option>  
+                              <option value="23">RR</option>    
+                              <option value="24">SC</option>                                      
+                              <option value="25">SP</option>                                     
+                              <option value="26">SE</option>                                      
+                              <option value="27">TO</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="tb003_co_cpf">CEP</label>
+                            <input type="text" id="tb003_co_cpf" class="form-control cep">                        
+                        </div>
+                        <div class="col-md-2">
+                            <label for="tb003_dt_nascimento">Data de Nascimento</label>
+                            <input type="text" id="tb003_dt_nascimento" class="form-control datepicker placeholder" >                        
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        
+                        <div class="col-md-2">
+                            <label for="tb003_ic_sexo">Sexo</label>
+                            <select id="tb003_ic_sexo" class="form-control">
+                              <option selected>Selecione</option>
+                              <option>Masculino</option>
+                              <option>Feminino</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="tb003_de_religiao">Religião</label>
+                            <input type="text" id="tb003_de_religiao" class="form-control">                        
+                        </div>
+                        <div class="col-md-3">
+                            <label for="tb003_de_profissao">Profissão</label>
+                            <input type="text" id="tb003_de_profissao" class="form-control">                        
+                        </div>
+                        <div class="col-md-5">
+                            <label for="tb003_de_email1">E-mail 1</label>
+                            <input type="text" id="tb003_de_email1" class="form-control" name="email">                        
+                        </div>
+                         
+                    </div>
+                    <div class="row">
+                                                
+                        <div class="col-md-2">
+                            <label for="tb003_de_telefone1">Telefone 1</label>
+                            <input type="text" id="tb003_de_telefone1" class="form-control phone_with_ddd" >                        
+                        </div>
+                        <div class="col-md-2">
+                            <label for="tb003_de_telefone2">Telefone 2</label>
+                            <input type="text" id="tb003_de_telefone2" class="form-control phone_with_ddd" >                        
+                        </div>
+                        <div class="col-md-2">
+                            <label for="tb003_de_telefone3">Telefone 3</label>
+                            <input type="text" id="tb003_de_telefone3" class="form-control phone_with_ddd" name="phone">                        
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <button type="submit" class="btn btn-default btn-primary">Salvar</button>
+            </form>
+            <h3>Atendimento</h3>
+            <hr>
+            <button type="button" class="btn btn-default btn-primary marginBottom">
+                <span class="glyphicon  glyphicon-plus"></span> Novo
+            </button>
+          
+            <div class="table-responsive">
+                <table id="atendimento" class=" table table-striped">
+                    <thead>
+                        <tr>
+                            <th width="22%">ID</th>
+                            <th width="22%">Data Início</th>
+                            <th width="22%">Data Fim</th>
+                            <th width="28%">Situação</th>
+                            <th width="2%"></th>
+                            <th width="2%"></th>
+                            <th width="2%"></th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th colspan="6"></th>
+                            
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <tr>
+                            <td>0001</td>
+                            <td>05/12/2014</td>
+                            <td>25/12/2014</td>
+                            <td>Em andamento</td>
+                            <td></td>
+                            <td>
+                                <button type="button" class="btn btn-default btn-primary btn-xs btn-warning meuTooltip" title="Editar">
+                                    <span class="glyphicon  glyphicon-pencil"></span>
+                                </button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-default btn-primary btn-xs btn-danger meuTooltip" title="Excluir">
+                                    <span class="glyphicon  glyphicon-remove"></span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>0002</td>
+                            <td>01/11/2014</td>
+                            <td>20/11/2014</td>
+                            <td>Interrompido</td>
+                            <td></td>
+                            <td>
+                                <button type="button" class="btn btn-default btn-primary btn-xs btn-warning meuTooltip"  title="Editar">
+                                    <span class="glyphicon  glyphicon-pencil"></span>
+                                </button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-default btn-primary btn-xs btn-danger meuTooltip" title="Excluir">
+                                    <span class="glyphicon  glyphicon-remove"></span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>0003</td>
+                            <td>10/10/2014</td>
+                            <td>20/10/2014</td>
+                            <td>Comcluido</td>
+                            <td>
+                                <button type="button" class="btn btn-default btn-primary btn-xs btn-success meuTooltip"title="Reabertura">
+                                    <span class="glyphicon  glyphicon-edit"></span>
+                                </button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-default btn-primary btn-xs btn-warning meuTooltip"title="Editar">
+                                    <span class="glyphicon  glyphicon-pencil"></span>
+                                </button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-default btn-primary btn-xs btn-danger meuTooltip" title="Excluir">
+                                    <span class="glyphicon  glyphicon-remove"></span>
+                                </button>
+                            </td>
+                        </tr>
+                       
+                    </tbody>
+                </table>
+            </div>    
+        </div> <!-- /container -->
+    </body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<link rel="stylesheet" media="screen" href="css/bootstrap.css" />
+<link rel="stylesheet" media="screen" href="css/integration_DT_Bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="css/datepicker3.css"/>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+<script type="text/javascript" src="js/jquery-2.0.3.min.js" ></script>
+<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="js/integration_DT_Bootstrap.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="js/locales/bootstrap-datepicker.pt-BR.js"></script>
+<script type="text/javascript" src="js/validator/bootstrapValidator.js"></script>
+<script type="text/javascript" src="js/validator/language/pt_BR.js" ></script>
+<script type="text/javascript" src="js/jquery-mask-plugin.js"></script>
+<script type="text/javascript" src="js/geral.js" ></script>
+
+<title>Novo-Trabalhador</title>
+</head>
+
+<body>
+	    <!-- Static navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">NOSSO LAR  </a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Consulta</a></li>
+            <li class="Cadastro active">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cadastro <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+              	<li><a href="#">Trabalhador</a></li>
+                <li><a href="#">Paciente</a></li>
+                <li><a href="#">Compromisso</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+                <li class="dropdown-submenu">
+                	<a tabindex="-1" href="#">Mais opções -</a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                    	<li><a href="#">teste2</a></li>
+                        <li><a href="#">teste2</a></li>
+                    </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                <a href="#" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Fábio Seixas Sales<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#perfil"><span class="glyphicon glyphicon-user"></span> Perfil</a></li>
+                    <li class="divider"></li>
+                    <li><a href="index-fixo.html"><span class="glyphicon glyphicon-log-out"></span> Sair</a></li>
+                </ul>
+                </li>
+            </ul>
+          
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+    
+        <ol class="breadcrumb">
+            <li><a href="#">Cadastro</a></li>
+            <li>Trabalhador</li>
+            <li class="active">Novo Trabalhador</li>
+        </ol>
+        
+       
+        <h2>Novo Trabalhador</h2>
+        <hr>
+        
+        <form role="form">
+            
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label for="tb002-co-matricula" class="obrigatorio" >Matrícula</label>
+                        <input type="text" id="tb002-co-matricula" class="form-control">                        
+                    </div>
+                    <div class="col-md-3">
+                        <label for="tb002-co-senha" class="obrigatorio">Senha</label>
+                        <input type="text" id="tb002-co-senha" class="form-control" >                        
+                    </div>
+                    <div class="col-md-6">
+                        <label for="tb002-no-trabalhador" class="obrigatorio">Nome</label>
+                        <input type="text" id="tb002-no-trabalhador" class="form-control" >                        
+                    </div>
+                    
+                </div>
+                
+                <div class="row">
+                	<div class="col-md-3">
+                        <label for="tb002-no-cracha">Cracha</label>
+                        <input type="text" id="tb002-no-cracha" class="form-control">                        
+                    </div>
+                     <div class="col-md-6">
+                        <label for="tb002-ed-trabalhador">Endereço</label>
+                        <input type="text" id="tb002-ed-trabalhador" class="form-control">                        
+                    </div>
+                    <div class="col-md-3">
+                        <label for="tb002-no-bairro">Bairro</label>
+                        <input type="text" id="tb002-no-bairro" class="form-control">                        
+                    </div>
+                </div>
+                
+                <div class="row">
+                 	<div class="col-md-3">
+                        <label for="tb002-no-cidade">Cidade</label>
+                        <input type="text"  id="tb002-no-cidade" class="form-control">                        
+                    </div>
+                    
+                    <div class="col-md-1">
+                            <label for="tb002-sg-uf">UF</label>
+                            <select id="tb002-sg-uf" class="form-control">
+                              <option value="00"selected>--</option>
+                              <option value="01">AC</option>
+                              <option value="02">AL</option>
+                              <option value="03">AM</option>
+                              <option value="04">BA</option>
+                              <option value="05">CE</option>
+                              <option value="06">DF</option>
+                              <option value="07">ES</option>
+                              <option value="08">GO</option>
+                              <option value="09">AP</option>
+                              <option value="10">MA</option>
+                              <option value="11">MT</option>
+                              <option value="12">MS</option>
+                              <option value="13">MG</option>
+                              <option value="14">PA</option>
+                              <option value="15">PB</option>
+                              <option value="16">PR</option>
+                              <option value="17">PB</option>
+                              <option value="18">PI</option>
+                              <option value="19">RJ</option>
+                              <option value="20">RN</option>
+                              <option value="21">RS</option>  
+                              <option value="22">RO</option>  
+                              <option value="23">RR</option>    
+                              <option value="24">SC</option>                                      
+                              <option value="25">SP</option>                                     
+                              <option value="26">SE</option>                                      
+                              <option value="27">TO</option>
+                            </select>
+                        </div>
+                    <div class="col-md-2">
+                        <label for="tb002-co-cep">CEP</label>
+                        <input type="text" id="tb002-co-cep" class="form-control cep">                        
+                    </div>
+                    <div class="col-md-2">
+                        <label for="tb002-dt-nascimento">Data de Nascimento</label>
+                        <input type="text" id="tb002-dt-nascimento" class="form-control placeholder datepicker">                        
+                    </div>
+                     <div class="col-md-2">
+                        <label for="tb002-co-cpf">CPF</label>
+                        <input type="text" id="tb002-co-cpf" class="form-control cpf">                        
+                    </div>
+                    <div class="col-md-2">
+                        <label for="tb002-co-rg">RG</label>
+                        <input type="text" id="tb002-co-rg" class="form-control">                        
+                    </div>
+                     
+                </div>
+                <div class="row">
+                	<div class="col-md-2">
+                        <label for="tb002-ic-sexo">Sexo</label>
+                        <select id="tb002-ic-sexo" class="form-control">
+                          <option selected>Selecione</option>
+                          <option>Masculino</option>
+                          <option>Feminino</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="tb002-de-profissao">Profissão</label>
+                        <input type="text" id="tb002-de-profissao" class="form-control">                        
+                   	</div>
+                   	<div class="col-md-2">
+                        <label for="tb002-de-telefone1">Telefone 1</label>
+                        <input type="text" id="tb002-de-telefone1" class="form-control phone_with_ddd">                        
+                    </div>
+                    <div class="col-md-2">
+                        <label for="tb002-de-telefone2">Telefone 2</label>
+                        <input type="text" id="tb002-de-telefone2" class="form-control phone_with_ddd">                        
+                    </div>
+                    <div class="col-md-2">
+                        <label for="tb002-de-telefone3">Telefone 3</label>
+                        <input type="text" id="tb002-de-telefone3" class="form-control phone_with_ddd">                        
+                    </div>
+                </div>
+                <div class="row">
+                	<div class="col-md-6">
+                    	<label for="tb002-de-email1">E-mail 1</label>
+                        <input type="text" id="tb002-de-email1" class="form-control">                        
+                    </div>
+                    <div class="col-md-6">
+                    	<label for="tb002-de-email2">E-mail 2</label>
+                        <input type="text" id="tb002-de-email2" class="form-control">                        
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="tb002-im-foto">Foto</label>
+                <input type="file" id="tb002-im-foto">
+            </div>
+            <button type="submit" class="btn btn-default btn-primary">Salvar</button>
+        </form>
+        
+     
+ 
+      
+
+    </div> <!-- /container -->
+</html>

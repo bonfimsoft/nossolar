@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<link rel="stylesheet" media="screen" href="css/bootstrap.css" />
+<link rel="stylesheet" media="screen" href="css/integration_DT_Bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+<script type="text/javascript" src="js/jquery-2.0.3.min.js" ></script>
+<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="js/integration_DT_Bootstrap.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+<script type="text/javascript" src="js/geral.js" ></script>
+<title>NL</title>
+</head>
+
+<body>
+	    <!-- Static navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">NOSSO LAR  </a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Consulta</a></li>
+            <li class="Cadastro active">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cadastro <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+              	<li><a href="#">Trabalhador</a></li>
+                <li><a href="#">Paciente</a></li>
+                <li><a href="#">Compromisso</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Entrevista</a></li>
+              </ul>
+            </li>
+          </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                <a href="#" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Fábio Seixas Sales<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#perfil"><span class="glyphicon glyphicon-user"></span> Perfil</a></li>
+                    <li class="divider"></li>
+                    <li><a href="login.html"><span class="glyphicon glyphicon-log-out"></span> Sair</a></li>
+                </ul>
+                </li>
+            </ul>
+          
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+    
+        <ol class="breadcrumb">
+            <li><a href="#">Cadastro</a></li>
+            <li class="active">Paciente</li>
+        </ol>
+        
+       
+        <h2>Cadastro de Atendimento </h2>
+        <hr>
+        <!-----------------------------------------------------------
+         class= alert-success alert-info alert-warning alert-danger
+         ------------------------------------------------------------>
+        <div class="alert alert-success" role="alert">Cadastro realizado com sucesso.</div>
+        <form role="form">
+            
+            <div class="form-group">
+                <div class="row">
+                	
+                    <div class="col-md-4">
+                        <label for="tb008_dt_inicio">Nome do Paciente</label>
+                        <select id="tb008_ic_situacao" class="form-control">
+                          <option selected>Selecione</option>
+                          <option>Lorem ipsum dolor sit amet consectetur</option>
+                          <option>Lorem ipsum dolor sit amet consectetur</option>
+                          <option>Lorem ipsum dolor sit amet consectetur</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="tb008_dt_inicio">Data Início</label>
+                        <input type="date" id="tb008_dt_inicio" class="form-control ng-pristine ng-invalid ng-invalid-required" required name="type_something" data-ng-trim="false" data-ng-model="form.type_something">                        
+                    </div>
+                    <div class="col-md-2">
+                        <label for="tb008_dt_fim">Data Fim</label>
+                        <input type="date" id="tb003_dt_fim" class="form-control ng-pristine ng-invalid ng-invalid-required" required name="type_something" data-ng-trim="false" data-ng-model="form.type_something">                        
+                    </div>
+                    <div class="col-md-2">
+                        <label for="tb008_ic_situacao">Situação</label>
+                        <select id="tb008_ic_situacao" class="form-control">
+                          <option selected>Selecione</option>
+                          <option>Em Andamento</option>
+                          <option>Concluido</option>
+                          <option>Interrompido</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="tb008_id_atendimento">Atendimento</label>
+                        <input type="text" id="tb008_id_atendimento" class="form-control" placeholder="20"  disabled>                        
+                    </div>
+                    
+                </div>
+                
+                <div class="row">
+                	<div class="col-md-5">
+                        <label for="tb008_no_responsavel">Nome do Responsável</label>
+                        <input type="text" id="tb008_no_responsavel" class="form-control ng-pristine ng-invalid ng-invalid-required" required name="type_something" data-ng-trim="false" data-ng-model="form.type_something">                        
+                    </div>
+                    <div class="col-md-2">
+                        <label for="tb008_de_telefone">Telefone do Resp.</label>
+                        <input type="text" id="tb008_de_telefone" class="form-control ng-pristine ng-invalid ng-invalid-required" required name="type_something" data-ng-trim="false" data-ng-model="form.type_something">                        
+                    </div>
+                    <div class="col-md-5">
+                    	<label for="tb008_de_email">E-mail do Responsável</label>
+                        <input type="email" id="tb008_de_email" class="form-control ng-pristine ng-invalid ng-invalid-required" required name="type_something" data-ng-trim="false" data-ng-model="form.type_something">                        
+                    </div> 
+                    
+                    
+                </div>
+                <div class="row">
+                	<div class="col-md-7">
+     					<label for="">Dias que o paciente pode ser atendido</label>
+                    	<div class="form-control">	            
+    						<label class="checkbox-inline">
+                    			<input type="checkbox" id="inlineCheckbox1" value="option1"> Domingo
+                  			</label>
+                  			<label class="checkbox-inline">
+                    			<input type="checkbox" id="inlineCheckbox2" value="option2"> Segunda
+                  			</label>
+                  			<label class="checkbox-inline">
+                    			<input type="checkbox" id="inlineCheckbox3" value="option3"> Terça
+                  			</label>
+                  			<label class="checkbox-inline">
+                    			<input type="checkbox" id="inlineCheckbox3" value="option3"> Quarta
+                  			</label>
+                  			<label class="checkbox-inline">
+                    			<input type="checkbox" id="inlineCheckbox3" value="option3"> Quinta
+                  			</label>
+                  			<label class="checkbox-inline">
+                    			<input type="checkbox" id="inlineCheckbox3" value="option3"> Sexta
+                  			</label>
+                  			<label class="checkbox-inline">
+                    			<input type="checkbox" id="inlineCheckbox3" value="option3"> Sábado
+                  			</label>
+                 		</div>
+                	</div>
+                       
+                </div>
+
+
+              
+            </div><!--fim form-group-->
+			           
+            <button type="submit" class="btn btn-default btn-primary">Salvar</button>
+            <button type="submit" class="btn btn-default btn-primary">Entrevista</button>
+            <button type="submit" class="btn btn-default btn-primary">Tratamento</button>
+            <button type="submit" class="btn btn-default btn-primary">Voltar</button>  
+        </form>
+       
+      
+       
+     
+ 
+      
+
+    </div> <!-- /container -->
+</html>

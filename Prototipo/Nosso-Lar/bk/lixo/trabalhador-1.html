@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet" media="screen"/>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery-2.0.3.min.js" ></script>
+<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+<title>NL-1</title>
+</head>
+
+<body>
+	    <!-- Static navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">NOSSO LAR  </a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Consulta</a></li>
+            <li class="Cadastro active">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cadastro <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+              	<li><a href="#">Trabalhador</a></li>
+                <li><a href="#">Paciente</a></li>
+                <li><a href="#">Compromisso</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+                <li class="dropdown-submenu">
+                	<a tabindex="-1" href="#">Mais opções -</a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                    	<li><a href="#">teste2</a></li>
+                        <li><a href="#">teste2</a></li>
+                    </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                <a href="#" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Fábio Seixas Sales<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#perfil"><span class="glyphicon glyphicon-user"></span> Perfil</a></li>
+                    <li class="divider"></li>
+                    <li><a href="login.html"><span class="glyphicon glyphicon-log-out"></span> Sair</a></li>
+                </ul>
+                </li>
+            </ul>
+          
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+    
+        <ol class="breadcrumb">
+            <li><a href="#">Cadastro</a></li>
+            <li class="active">Trabalhador</li>
+        </ol>
+        
+       
+        <h2>Trabalhador - <small>Cadastro</small></h2>
+        <hr>
+        
+		<!-- class= alert-success alert-info alert-warning alert-danger-->
+        <div class="alert alert-success" role="alert">Cadastro realizado com sucesso.</div>
+        
+        <form class="form-horizontal" role="form">
+        
+        
+          <div class="form-group has-success has-feedback">
+            <label for="tb002_co_matricula" class="col-md-3 control-label">Matrícula:</label>
+            <div class="col-md-3">
+            	<input type="text" class="form-control" id="tb002_co_matricula">
+                <span class="glyphicon glyphicon-ok form-control-feedback "></span>
+          	</div>
+          </div>
+          <div class="form-group  has-error has-feedback">
+          	<label for="tb002_co_senha" class="col-md-3 control-label">Senha:</label>
+          	<div class="col-md-3">
+          		<input type="text" class="form-control" id="tb002_co_senha">
+                <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+          	</div>
+          </div>
+         
+          <div class="form-group">
+          	<label for="tb002_no_cracha" class="col-md-3 control-label">Cracha:</label>
+          	<div class="col-md-3">
+          		<input type="text" class="form-control" id="tb002_no_cracha">
+          	</div>
+          </div>
+          <div class="form-group">
+          	<label for="tb002_no_trabalhador" class="col-md-3 control-label">Nome:</label>
+          	<div class="col-md-6">
+          		<input type="text" class="form-control" id="tb002_no_trabalhador">
+          	</div>
+          </div>
+          <div class="form-group">
+          	<label for="tb002_ed_trabalhador" class="col-md-3 control-label">Endereço:</label>
+          	<div class="col-md-6">
+          		<input type="text" class="form-control" id="tb002_ed_trabalhador">
+          	</div>
+          </div>
+          <div class="form-group">
+          	<label for="tb002_no_bairro" class="col-md-3 control-label">Bairro:</label>
+          	<div class="col-md-3">
+          		<input type="text" class="form-control" id="tb002_no_bairro">
+          	</div>
+          </div>
+          <div class="form-group">
+          	<label for="tb002_no_cidade" class="col-md-3 control-label">Cidade:</label>
+          	<div class="col-md-3">
+          		<input type="text" class="form-control" id="tb002_no_cidade">
+          	</div>
+          </div>
+          <div class="form-group">
+          	<label for="tb002_sg_uf" class="col-md-3 control-label">UF:</label>
+          	<div class="col-md-1">
+          		<input type="text" class="form-control" id="tb002_sg_uf">
+          	</div>
+          </div>
+          <div class="form-group">
+          	<label for="tb002_co_cep" class="col-md-3 control-label">CEP:</label>
+          	<div class="col-md-2">
+          		<input type="text" class="form-control" id="tb002_co_cep">
+          	</div>
+          </div>
+           <div class="form-group">
+          	<label for="tb002_dt_nascimento" class="col-md-3 control-label">Data de Nascimento</label>
+          	<div class="col-md-2">
+          		<input type="text" class="form-control" id="tb002_dt_nascimento">
+          	</div>
+          </div>
+           <div class="form-group">
+          	<label for="tb002_co_cpf" class="col-md-3 control-label">CPF:</label>
+          	<div class="col-md-2">
+          		<input type="text" class="form-control" id="tb002_co_cpf">
+          	</div>
+          </div>
+          <div class="form-group">
+          	<label for="tb002_co_rg" class="col-md-3 control-label">RG:</label>
+          	<div class="col-md-2">
+          		<input type="text" class="form-control" id="tb002_co_rg">
+          	</div>
+          </div>
+          <div class="form-group">
+          	<label for="" class="col-md-3 control-label">Sexo:</label>
+          	<div class="col-md-2">
+          	    <label class="radio-inline">
+  					<input type="radio" name="sexo" id="tb002_ic_sexo1" value="option1"> Masculino
+				</label>
+				<label class="radio-inline">
+  					<input type="radio" name="sexo" id="tb002_ic_sexo2" value="option2"> Feminino
+				</label>
+            </div>
+          </div>
+          <div class="form-group">
+          	<label for="tb002_de_profissao" class="col-md-3 control-label">Profissão:</label>
+          	<div class="col-md-2">
+          		<input type="text" class="form-control" id="tb002_de_profissao">
+          	</div>
+          </div>
+          <div class="form-group">
+          	<label for="tb002_im_foto" class="col-md-3 control-label">Foto:</label>
+          	<div class="col-md-2">
+          		<input type="file"  id="tb002_im_foto">
+          	</div>
+          </div>
+          <div class="form-group">
+          	<label for="tb002_de_email1" class="col-md-3 control-label">E-mail 1:</label>
+          	<div class="col-md-6">
+          		<input type="text" class="form-control" id="tb002_de_email1">
+          	</div>
+          </div>
+          <div class="form-group">
+          	<label for="tb002_de_email2" class="col-md-3 control-label">E-mail 2:</label>
+          	<div class="col-md-6">
+          		<input type="text" class="form-control" id="tb002_de_email2">
+          	</div>
+          </div>
+          <div class="form-group">
+          	<label for="tb002_de_telefone1" class="col-md-3 control-label">Telefone 1:</label>
+          	<div class="col-md-2">
+          		<input type="text" class="form-control" id="tb002_de_telefone1">
+          	</div>
+          </div>
+          <div class="form-group">
+          	<label for="tb002_de_telefone2" class="col-md-3 control-label">Telefone 2:</label>
+          	<div class="col-md-2">
+          		<input type="text" class="form-control" id="tb002_de_telefone2">
+          	</div>
+          </div>
+          <div class="form-group">
+          	<label for="tb002_de_telefone3" class="col-md-3 control-label">Telefone 3:</label>
+          	<div class="col-md-2">
+          		<input type="text" class="form-control" id="tb002_de_telefone3">
+          	</div>
+          </div>
+          <div class="form-group">
+          	<div class="col-sm-offset-3 col-sm-6">
+          		<button type="submit" class=" btn btn-default btn-primary">Enviar</button>
+          	</div>
+          </div>
+        </form>
+    </div> <!-- /container -->
+</html>

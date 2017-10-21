@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<link rel="stylesheet" media="screen" href="css/bootstrap.css" />
+<link rel="stylesheet" media="screen" href="css/integration_DT_Bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="css/datepicker3.css"/>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+<script type="text/javascript" src="js/jquery-2.0.3.min.js" ></script>
+<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="js/integration_DT_Bootstrap.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="js/locales/bootstrap-datepicker.pt-BR.js"></script>
+<script type="text/javascript" src="js/validator/bootstrapValidator.js"></script>
+<script type="text/javascript" src="js/validator/language/pt_BR.js" ></script>
+<script type="text/javascript" src="js/jquery-mask-plugin.js"></script>
+<script type="text/javascript" src="js/geral.js" ></script>
+
+
+<title>Nova-Entrevista</title>
+</head>
+
+<body>
+	    <!-- Static navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">NOSSO LAR  </a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Consulta</a></li>
+            <li class="Cadastro active">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cadastro <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+              	<li><a href="#">Trabalhador</a></li>
+                <li><a href="#">Paciente</a></li>
+                <li><a href="#">Compromisso</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Entrevista</a></li>
+              </ul>
+            </li>
+          </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                <a href="#" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Fábio Seixas Sales<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#perfil"><span class="glyphicon glyphicon-user"></span> Perfil</a></li>
+                    <li class="divider"></li>
+                    <li><a href="login.html"><span class="glyphicon glyphicon-log-out"></span> Sair</a></li>
+                </ul>
+                </li>
+            </ul>
+          
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+    
+        <ol class="breadcrumb">
+            <li><a href="#">Cadastro</a></li>
+            <li class="active">Paciente</li>
+        </ol>
+        
+       
+        <h2>Nova Entrevista</h2>
+        <hr>
+        <!-----------------------------------------------------------
+         class= alert-success alert-info alert-warning alert-danger
+         ------------------------------------------------------------>
+        <div class="alert alert-success" role="alert">Cadastro realizado com sucesso.</div>
+        <form role="form">
+            
+            <div class="form-group">
+                <div class="row">
+                	<div class="col-md-2">
+                        <label for="tb010_dt_entrevista">Data da Entrevista</label>
+                        <input type="text" id="tb010_dt_entrevista" class="form-control placeholder datepicker">                        
+                    </div>
+                    
+                    
+                    <div class="col-md-4">
+                        <label for="tb010_no_entrevistador">Nome do Entrevistador</label>
+                        <input type="text" id="tb010_no_entrevistador" class="form-control">                        
+                    </div>
+                    <div class="col-md-2">
+                        <label for="tb010_ic_tipo_entrevista">Tipo de Entrevista</label>
+                        <select id="tb010_ic_tipo_entrevista" class="form-control">
+                          <option selected>Selecione</option>
+                          <option>Inicial</option>
+                          <option>Final</option>
+                          <option>Complementar</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="tb010_ic_apresenta_melhoras">Apresentou Melhoras?</label>
+                        <select id="tb010_ic_apresenta_melhoras" class="form-control">
+                          <option selected>Selecione</option>
+                          <option>Sim</option>
+                          <option>Não</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="tb010_ic_tratamento_medico">Tratamento Médico?</label>
+                        <select id="tb010_ic_tratamento_medico" class="form-control">
+                          <option selected>Selecione</option>
+                          <option>Sim</option>
+                          <option>Não</option>
+                        </select>
+                    </div>
+                    
+                </div>
+                
+                <div class="row">
+                	<div class="col-md-2">
+                        <label for="tb010_ic_tratamento_psiquiatrico">Tratamento Psiquiatrico?</label>
+                        <select id="tb010_ic_tratamento_psiquiatrico" class="form-control">
+                          <option selected>Selecione</option>
+                          <option>Sim</option>
+                          <option>Não</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="tb010_ic_tratamento_psicologico">Tratamento Psicológico?</label>
+                        <select id="tb010_ic_tratamento_psicologico" class="form-control">
+                          <option selected>Selecione</option>
+                          <option>Sim</option>
+                          <option>Não</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="tb010_ic_evangelho_lar">Faz Evangelho em Casa?</label>
+                        <select id="tb010_ic_evangelho_lar" class="form-control">
+                          <option selected>Selecione</option>
+                          <option>Sim</option>
+                          <option>Não</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="tb010_ic_leitura_livros">Lê livros Espíritas?</label>
+                        <select id="tb010_ic_leitura_livros" class="form-control">
+                          <option selected>Selecione</option>
+                          <option>Sim</option>
+                          <option>Não</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+        <h4>Problemas</h4>
+       	<hr>
+        <button type="button" class="btn btn-default btn-primary marginBottom" data-toggle="modal" data-target="#myModal">
+  			<span class="glyphicon  glyphicon-plus"></span> Incluir
+		</button>
+        
+        <div class="table-responsive">
+            <table id="full" class=" table table-striped">
+                <thead>
+                    <tr>
+                        <th width="30%">Tipo</th>
+                        <th width="66%">Escala</th>
+                        <th width="2%"></th>
+                        <th width="2%"></th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th colspan="4"></th>
+                        
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <td>Row 1 Data 1</td>
+                        <td>Row 1 Data 2</td>
+                        <td>
+                        	<button type="button" class="btn btn-default btn-primary btn-xs btn-warning meuTooltip" title="Editar">
+  								<span class="glyphicon  glyphicon-pencil"></span>
+							</button>
+        				</td>
+                        <td>
+                        	<button type="button" class="btn btn-default btn-primary btn-xs btn-danger meuTooltip" title="Excluir">
+  								<span class="glyphicon  glyphicon-remove"></span>
+							</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Row 2 Data 3</td>
+                        <td>Row 2 Data 4</td>
+                         <td>
+                        	<button type="button" class="btn btn-default btn-primary btn-xs btn-warning meuTooltip"  title="Editar">
+  								<span class="glyphicon  glyphicon-pencil"></span>
+							</button>
+        				</td>
+                        <td>
+                        	<button type="button" class="btn btn-default btn-primary btn-xs btn-danger meuTooltip" title="Excluir">
+  								<span class="glyphicon  glyphicon-remove"></span>
+							</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Row 2 Data 3</td>
+                        <td>Row 2 Data 4</td>
+                         <td>
+                        	<button type="button" class="btn btn-default btn-primary btn-xs btn-warning meuTooltip"title="Editar">
+  								<span class="glyphicon  glyphicon-pencil"></span>
+							</button>
+        				</td>
+                        <td>
+                        	<button type="button" class="btn btn-default btn-primary btn-xs btn-danger meuTooltip" title="Excluir">
+  								<span class="glyphicon  glyphicon-remove"></span>
+							</button>
+                        </td>
+                    </tr>
+                   
+                </tbody>
+            </table>
+             	<button type="submit" class="btn btn-default btn-primary">Salvar</button>
+        		<button type="submit" class="btn btn-default">Voltar</button>
+        	</form>
+        </div> 
+        
+        
+<!----------------------------------------------------------------------------------------
+ 			|	MODAL	|
+------------------------------------------------------------------------------------------->       
+
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Incluir Problema</h4>
+              </div>
+              <div class="modal-body">
+                <form role="form">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="tb010_ic_tipo_entrevista">Tipo de Entrevista</label>
+                                <select id="tb010_ic_tipo_entrevista" class="form-control">
+                                    <option selected>Selecione</option>
+                                    <option>Inicial</option>
+                                    <option>Final</option>
+                                    <option>Complementar</option>
+                                </select>
+                            </div>
+                        </div>
+                     </div>   
+                  </form>        
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-primary">Salvar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+ 
+      
+
+    </div> <!-- /container -->
+
+</body>
+</html>
