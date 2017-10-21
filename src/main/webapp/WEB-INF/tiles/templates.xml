@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<definition name="nossolar.homepage" template="/layouts/home.jsp">
+		<put-attribute name="titulo" value="Nosso Lar - Principal" />
+		<put-attribute name="cabecalho" value="/WEB-INF/views/cabecalho.jsp" />
+		<put-attribute name="corpo" value="/WEB-INF/views/bemvindo.jsp" />
+	</definition>
+
+	<definition name="nossolar.trabalhador.list" template="/layouts/home.jsp"
+		preparer="br.com.bonfimsoft.nossolar.view.preparer.TrabalhadorListPreparer">
+		<put-attribute name="titulo"
+			value="Nosso Lar - Relação de Trabalhadores" />
+		<put-attribute name="cabecalho" value="/WEB-INF/views/cabecalho.jsp" />
+		<put-attribute name="corpo"
+			value="/WEB-INF/views/cadastro/trabalhador-list.jsp" />
+	</definition>
+
+	<definition name="nossolar.trabalhador.form" template="/layouts/home.jsp"
+		preparer="br.com.bonfimsoft.nossolar.view.preparer.TrabalhadorFormPreparer">
+		<put-attribute name="titulo"
+			value="Nosso Lar - Cadastro de Trabalhador" />
+		<put-attribute name="cabecalho" value="/WEB-INF/views/cabecalho.jsp" />
+		<put-attribute name="corpo"
+			value="/WEB-INF/views/cadastro/trabalhador-form.jsp" />
+	</definition>
+
+	<definition name="nossolar.paciente.list" template="/layouts/home.jsp"
+		preparer="br.com.bonfimsoft.nossolar.view.preparer.PacienteListPreparer">
+		<put-attribute name="titulo" value="Nosso Lar - Relação de Pacientes" />
+		<put-attribute name="cabecalho" value="/WEB-INF/views/cabecalho.jsp" />
+		<put-attribute name="corpo"
+			value="/WEB-INF/views/cadastro/paciente-list.jsp" />
+	</definition>
+
+	<definition name="nossolar.paciente.form" template="/layouts/home.jsp"
+		preparer="br.com.bonfimsoft.nossolar.view.preparer.PacienteFormPreparer">
+		<put-attribute name="titulo" value="Nosso Lar - Cadastro de Paciente" />
+		<put-attribute name="cabecalho" value="/WEB-INF/views/cabecalho.jsp" />
+		<put-attribute name="corpo"
+			value="/WEB-INF/views/cadastro/paciente-form.jsp" />
+	</definition>
+
+	<definition name="nossolar.atendimento.form" template="/layouts/home.jsp"
+		preparer="br.com.bonfimsoft.nossolar.view.preparer.AtendimentoFormPreparer">
+		<put-attribute name="titulo" value="Nosso Lar - Cadastro de Paciente" />
+		<put-attribute name="cabecalho" value="/WEB-INF/views/cabecalho.jsp" />
+		<put-attribute name="corpo"
+			value="/WEB-INF/views/cadastro/atendimento-form.jsp" />
+	</definition>
+	
+	<definition name="nossolar.entrevista.list" template="/layouts/home.jsp"
+		preparer="br.com.bonfimsoft.nossolar.view.preparer.PacienteFormPreparer">
+		<put-attribute name="titulo" value="Nosso Lar - Relação de Entrevistas" />
+		<put-attribute name="cabecalho" value="/WEB-INF/views/cabecalho.jsp" />
+		<put-attribute name="corpo"
+			value="/WEB-INF/views/cadastro/entrevista-list.jsp" />
+	</definition>
+	
+	<definition name="nossolar.entrevista.form" template="/layouts/home.jsp"
+		preparer="br.com.bonfimsoft.nossolar.view.preparer.PacienteFormPreparer">
+		<put-attribute name="titulo" value="Nosso Lar - Cadastro de Entrevista" />
+		<put-attribute name="cabecalho" value="/WEB-INF/views/cabecalho.jsp" />
+		<put-attribute name="corpo"
+			value="/WEB-INF/views/cadastro/entrevista-form.jsp" />
+	</definition>
+	
+	<definition name="nossolar.problema.list" template="/layouts/home.jsp">
+		<put-attribute name="titulo" value="Nosso Lar - Relação de Problemas" />
+		<put-attribute name="cabecalho" value="/WEB-INF/views/cabecalho.jsp" />
+		<put-attribute name="corpo"
+			value="/WEB-INF/views/cadastro/problema-list.jsp" />
+	</definition>
+	
+	<definition name="nossolar.problema.form" template="/layouts/home.jsp">
+		<put-attribute name="titulo" value="Nosso Lar - Cadastro de Problema" />
+		<put-attribute name="cabecalho" value="/WEB-INF/views/cabecalho.jsp" />
+		<put-attribute name="corpo"
+			value="/WEB-INF/views/cadastro/problema-form.jsp" />
+	</definition>
+		
+	<definition name="nossolar.tratamento.list" template="/layouts/home.jsp"
+		preparer="br.com.bonfimsoft.nossolar.view.preparer.PacienteFormPreparer">
+		<put-attribute name="titulo" value="Nosso Lar - Relação de Tratamentos" />
+		<put-attribute name="cabecalho" value="/WEB-INF/views/cabecalho.jsp" />
+		<put-attribute name="corpo"
+			value="/WEB-INF/views/cadastro/tratamento-list.jsp" />
+	</definition>
+	
+	<definition name="nossolar.tratamento.form" template="/layouts/home.jsp"
+		preparer="br.com.bonfimsoft.nossolar.view.preparer.PacienteFormPreparer">
+		<put-attribute name="titulo" value="Nosso Lar - Cadastro de Tratamento" />
+		<put-attribute name="cabecalho" value="/WEB-INF/views/cabecalho.jsp" />
+		<put-attribute name="corpo"
+			value="/WEB-INF/views/cadastro/tratamento-form.jsp" />
+	</definition>
+
+</tiles-definitions>
